@@ -14,4 +14,4 @@ const m = function run() {
     return 17;
 };
 
-console.log('a: ', typeof a);
+console.log('a:', typeof a);
