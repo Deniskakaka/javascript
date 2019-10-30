@@ -14,16 +14,5 @@ const m = function run() {
     return 17;
 };
 
-console.log('a: ', typeof(a));
-console.log('b: ', typeof(b));
-console.log('c: ', typeof(c));
-console.log('d: ', typeof(d));
-console.log('e: ', typeof(e));
-console.log('f: ', typeof(f));
-console.log('g: ', typeof(g));
-console.log('h: ', typeof(h));
-console.log('i: ', typeof(i));
-console.log('j: ', typeof(j));
-console.log('k: ', typeof(k));
-console.log('l: ', typeof(l));
-console.log('m: ', typeof(m));
+console.log('a: ', typeof a, 'b: ', typeof b, 'c: ',
+    typeof c, 'd: ', typeof d, 'e: ', typeof e, 'f: ', typeof f, 'g: ', typeof g, 'h: ', typeof h, 'i: ', typeof i, 'j: ', typeof j, 'k: ', typeof k, 'l: ', typeof l, 'm: ', typeof m);
