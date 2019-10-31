@@ -1,5 +1,5 @@
-const m = 1;
-const n = 50;
+const m = 6;
+const n = 20;
 let result = 0;
 
 for (let i = m; i <= n; i++) {
@@ -14,3 +14,4 @@ for (let i = m; i <= n; i++) {
         console.log(i);
     }
 }
+console.log(result)
