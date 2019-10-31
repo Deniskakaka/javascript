@@ -8,5 +8,5 @@ do {
     if (a % 2 == 1) {
         result *= a;
     }
+    console.log(result)
 } while (a <= n)
-console.log(result)
