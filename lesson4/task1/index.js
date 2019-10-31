@@ -5,4 +5,5 @@ while (a <= n) {
     a++;
     sum += a;
 }
+sum = sum;
 console.log(sum)
