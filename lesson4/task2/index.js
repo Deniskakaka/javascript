@@ -1,10 +1,11 @@
 const m = 1;
 const n = 7;
 let result = 1;
+let a = m;
 
-for (let i = m; i <= n; i++) {
-    if (i % 2 === 1) {
-        result *= i
+do {
+    a++;
+    if (a % 2 == 1) {
+        result *= a;
     }
-}
-console.log(result)
+} while (a <= n)
