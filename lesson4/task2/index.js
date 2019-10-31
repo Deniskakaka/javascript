@@ -8,6 +8,6 @@ do {
         result *= a;
     }
     a++;
-} while (a <= n);
+} while (a < n);
 
 console.log(result)
