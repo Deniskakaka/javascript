@@ -8,4 +8,6 @@ do {
     if (a % 2 == 1) {
         result *= a;
     }
-} while (a <= n)
+} while (a <= n);
+
+console.log(result);
