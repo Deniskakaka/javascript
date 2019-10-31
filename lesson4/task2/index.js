@@ -6,7 +6,6 @@ let a = m;
 do {
     a++;
     if (a % 2 == 1) {
-        result *= a;
+        console.log(result *= a);
     }
-    console.log(result);
 } while (a <= n);
