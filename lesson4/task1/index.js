@@ -1,8 +1,7 @@
 let n = 193;
-let result = 0;
+let sum = 0;
 let a = 1;
 while (a <= n) {
     a++;
-    result += a;
+    sum += a;
 }
-console.log(result)
