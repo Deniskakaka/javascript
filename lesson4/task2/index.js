@@ -5,7 +5,9 @@ let a = m;
 
 do {
     if (a % 2 == 1) {
-        console.log(result *= a);
+        result *= a;
     }
     a++;
 } while (a <= n);
+
+console.log(result)
