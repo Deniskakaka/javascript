@@ -1,12 +1,9 @@
 const m = 1;
 const n = 7;
 let result = 1;
-let a = m;
 
-do {
-    a++;
-    if (a % 2 == 1) {
-        result *= a;
+for (let i = m; i <= n; i++) {
+    if (i % 2 === 1) {
+        console.log(result *= i);
     }
-    console.log(result)
-} while (a <= n)
+}
