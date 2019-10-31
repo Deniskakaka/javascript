@@ -6,3 +6,5 @@ const favouriteDessert = 'cake';
 let pet_ = 'dog';
 let superNumber;
 superNumber = 17;
+
+console.log(undefined + undefined);
