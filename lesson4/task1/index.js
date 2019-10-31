@@ -1,8 +1,5 @@
-let n = 193;
+const n = 193;
 let sum = 0;
-let a = 1;
-while (n >= 1) {
-    n--;
-    sum += n;
+for (let i = 1; i <= n; i++) {
+    console.log(sum += i);
 }
-console.log(sum)
