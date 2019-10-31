@@ -48,7 +48,7 @@ console.log("18 * '3': ", 54);
 console.log("'9' - '3': ", '9' - '3');
 console.log("'seventeen' / 3: ", 'seventeen' / 3);
 console.log("4 * 'four': ", 4 * 'four');
-console.log('17 / 0', Infinity);
+console.log('17 / 0: ', Infinity);
 console.log("10 + 'seven': ", 10 + 'seven');
 console.log('undefined + 1: ', undefined + 1);
 console.log('null + 8: ', null + 8);
