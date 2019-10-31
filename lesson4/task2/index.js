@@ -4,8 +4,8 @@ let result = 1;
 let a = m;
 
 do {
-    a++;
     if (a % 2 == 1) {
         console.log(result *= a);
     }
+    a++;
 } while (a <= n);
