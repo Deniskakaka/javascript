@@ -3,5 +3,3 @@ function getPrimes(num) {
     if (num % i === 0) return false;
     console.log(num > 1);
 }
-
-getPrimes(10)
