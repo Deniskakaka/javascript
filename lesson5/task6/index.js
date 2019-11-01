@@ -1,9 +1,18 @@
 function getPrimes(num) {
-    return isPrime(num);
+    for (let i = 2; i <= num; i++) {
+        if (isPrime(i)) {
+            console.log(i)
+        }
+    }
 };
 
 function isPrime(num) {
-    for (var i = 2; i < num; i++)
-        if (num % i === 0) return false;
-    return num > 1;
+    let count = 2;
+    while (count < num) {
+        if (num % count === 0) {
+            return false;
+        }
+        count++;
+    }
+    return true;
 }
