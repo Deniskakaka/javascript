@@ -12,4 +12,3 @@ function getPrimes(num) {
         }
     }
 }
-getPrimes(10)
