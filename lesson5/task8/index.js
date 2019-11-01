@@ -1,5 +1,5 @@
 function compareSums(a, b, c, d) {
-    return sum();
+    return sum(a, b, c, d);
 };
 
 function sum(from, to) {
@@ -7,7 +7,7 @@ function sum(from, to) {
     to = arguments[2] + arguments[3];
     if (from > to) {
         return true;
-    } else {
+    } else if (to > from) {
         return false;
     }
 }
