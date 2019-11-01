@@ -1,9 +1,11 @@
 function getPrimes(num) {
-    for (let i = 1; i <= num; i++) {
-        if (num % i === 0 && i % 1 === 0) {
-            console.log(i)
+    for (let i = 2; i <= num; i++) {
+        for (let j = 1; j < i; j++) {
+            if (i % j == 0) {
+                console.log(i)
+            }
         }
     }
 }
 
-getPrimes(70)
+getPrimes(10)
