@@ -1,13 +1,13 @@
 function compareSums(a, b, c, d) {
-    return sum(a, b, c, d)
+    return sum();
 };
 
 function sum(from, to) {
     from = arguments[0] + arguments[1];
     to = arguments[2] + arguments[3];
     if (from > to) {
-        console.log(true);
+        return true;
     } else {
-        console.log(false);
+        return false;
     }
 }
