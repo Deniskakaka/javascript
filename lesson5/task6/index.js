@@ -1,8 +1,9 @@
 function getPrimes(num) {
-    for (let i = 2; i < num; i++) {
+    if (num < 1) return false;
+    for (let i = 1; i <= num; i++) {
         let count = 0;
         for (let j = 1; j <= i; j++) {
-            if (i % j !== 0 && i % 1 === 0) {
+            if (i % j) {
                 continue;
             }
             count++;
@@ -12,3 +13,5 @@ function getPrimes(num) {
         }
     }
 }
+
+getPrimes(10)
