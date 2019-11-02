@@ -1,4 +1,4 @@
-function getSpecialNumber(m, n) {
+function getSpecialNumbers(m, n) {
     let mas = [];
     for (let i = m; i <= n; i++) {
         if (i % 3 === 0) {
