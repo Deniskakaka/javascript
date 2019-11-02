@@ -1,6 +1,10 @@
 function checker(arr) {
     let max = Math.max(...arr);
-    console.log(max)
-};
+    let min = Math.min(...arr);
 
-checker([1, 3, 4, 6, 8, 9]);
+    if (max + min > 1000) {
+        return true;
+    } else {
+        return false;
+    }
+};
