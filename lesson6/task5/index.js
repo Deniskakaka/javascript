@@ -4,7 +4,7 @@ function squareArray(arr) {
     }
     let mas = [];
     for (let i = 0; i < arr.length; i++) {
-        mas.push(i * 2);
+        mas.push(i * i);
     };
     return mas;
 };
