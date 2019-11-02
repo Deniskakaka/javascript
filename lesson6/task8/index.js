@@ -5,5 +5,5 @@ function uniqueCount(array) {
             mas.push(array[i])
         }
     }
-    return mas;
+    return mas.length;
 }
