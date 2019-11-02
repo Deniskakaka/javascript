@@ -1,9 +1,6 @@
 function getArrayBounds(arr) {
-    if (Array.isArray(arr)) {
-        let mas = [arr.length, arr[0], arr.length - 1];
-        return mas;
-    } else {
+    if (!Array.isArray(arr)) {
         return null;
     }
-
+    return [arr.length, arr[0], arr[arr.length - 1]];
 };
