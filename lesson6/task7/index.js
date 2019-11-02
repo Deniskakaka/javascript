@@ -9,7 +9,5 @@ function sortAsc(array) {
             }
         }
     }
-    console.log(array)
+    return array;
 }
-
-sortAsc([2, 6, 4, 0, 1, 23])
