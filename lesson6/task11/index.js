@@ -8,5 +8,9 @@ function checker(arr) {
             min = arr[i];
         }
     };
-    return max + min
+    if (max + min > 1000) {
+        return true;
+    } else {
+        return false;
+    }
 };
