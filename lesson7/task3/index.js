@@ -1,6 +1,7 @@
 function flatArray(arr) {
-    let mas = arr.reduce((acc, num) => {
-        return acc.concat(num);
-    }, []);
+    let mas = [];
+    arr.forEach(i => {
+        mas = mas.concat(i)
+    });
     return mas;
 };
