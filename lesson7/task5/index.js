@@ -1,10 +1,8 @@
 function squareElement(arr) {
     if (!Array.isArray(arr)) {
         return null;
-    } else {
-        let copy = [...arr]
-        return copy.map(i => { return i * i });
     }
+    let copy = [...arr]
+    copy.map(i => { return i * i });
+    return copy;
 };
-
-squareElements([2, 2, 2])
