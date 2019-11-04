@@ -3,7 +3,7 @@ function pickProps(obj, arr) {
     for (let i in object(arr)) {
         for (let j in obj) {
             if (i === j) {
-                obj3[i] = obj[i];
+                obj3[j] = obj[j];
             }
         }
     }
