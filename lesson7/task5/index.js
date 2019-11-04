@@ -1,4 +1,4 @@
-function squaresElements(arr) {
+function squareElement(arr) {
     if (!Array.isArray(arr)) {
         return null;
     }
