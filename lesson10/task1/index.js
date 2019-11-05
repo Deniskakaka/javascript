@@ -17,9 +17,10 @@ function getFiniteNumbersV2(arr) {
 };
 
 function getNaN(arr) {
-    const mass = arr.filter(i => {
+    const mass = [];
+    arr.map(i => {
         if (Number.isNaN(i)) {
-            return i
+            mass.push(i)
         }
     });
     return mass;
