@@ -5,7 +5,7 @@ function getRandomNumbers(length, min, max) {
     if (max < min) {
         return null;
     }
-    if (!Number.isInteger(max - min)) {
+    if ((max - min) < 1) {
         return null;
     }
 
