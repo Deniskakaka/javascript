@@ -1,7 +1,14 @@
 function getRandomNumbers(length, min, max) {
     const mass = [];
-    for (let i = 0; i <= length; i++) {
-        mass.push(Math.floor(Math.random() * (max - min + 1)) + max);
+    if (max < min) {
+        return null;
+    } else if (!Number.isInteger(max - min)) {
+        return null;
+    } else {
+        for (let i = 0; i <= length; i++) {
+            mass.push(Math.floor(min + Math.random() * (max - min)));
+        }
+        return mass;
     }
-    return mass;
-}
+
+};
