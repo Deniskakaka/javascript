@@ -1,5 +1,6 @@
 function getCustomersList(obj) {
-    let arr = Object.entries(obj);
+    let newObject = JSON.parse(JSON.stringify(obj))
+    let arr = Object.entries(newObject);
     let mas = [];
     arr.map(i => {
         return i[1].id = i[0];
