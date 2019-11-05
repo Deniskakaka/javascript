@@ -1,20 +1,25 @@
 function getPeople(obj) {
-    const arr = Object.entries(obj);
-    const mas = [];
-    arr.forEach(i => {
-        i[1].forEach(j => {
-            if (!Array.isArray(j)) {
-                for (let q in j) {
-                    mas.push(j[q])
-                }
-            } else {
-                j.forEach(w => {
-                    for (let q in w) {
-                        mas.push(w[q])
-                    }
-                });
-            }
-        });
-    });
-    return mas;
+    const arr = Object.values(obj);
+    let mas = [];
+    mas.push(arr.map(i => i.map(j => { return j.name })).flat());
+    console.log(mas)
 };
+
+getPeople({
+    room1: [
+        { name: 'room1 name1' },
+        { name: 'room1 name2' },
+        { name: 'room1 name3' },
+        { name: 'room1 name4' },
+
+    ],
+    room2: [
+        { name: 'room2 name1' },
+    ],
+    room3: [
+        { name: 'room3 name1' },
+        { name: 'room3 name2' },
+        { name: 'room3 name3' },
+
+    ]
+})
