@@ -9,7 +9,7 @@ function getFiniteNumbers(arr) {
 
 function getFiniteNumbersV2(arr) {
     const mass = arr.filter(i => {
-        if (!isFinite(i)) {
+        if (window.isFinite(i)) {
             return i
         }
     });
