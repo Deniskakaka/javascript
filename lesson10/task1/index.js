@@ -10,7 +10,7 @@ function getFiniteNumbers(arr) {
 function getFiniteNumbersV2(arr) {
     const mass = [];
     arr.map(i => {
-        if (isFinite.isFinite(i)) {
+        if (isFinite(i)) {
             mass.push(i)
         }
     });
