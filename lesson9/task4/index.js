@@ -1,7 +1,7 @@
 function getPeople(obj) {
     const arr = Object.values(obj);
     let mas = arr.map(i => i.map(j => { return j.name })).flat();
-    console.log(mas)
+    return mas;
 };
 
 getPeople({
