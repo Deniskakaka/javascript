@@ -1,8 +1,8 @@
 function getTotalPrice(arr) {
-    let count = 0;
-    arr.forEach(i => {
-        count += i;
+    let count = arr.reduce((acc, number) => {
+        return acc + number;
     });
 
-    return '$' + count.toFixed(2);
+
+    return '$' + Number(count.toFixed(2));
 };
