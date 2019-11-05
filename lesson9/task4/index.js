@@ -3,8 +3,16 @@ function getPeople(obj) {
     const mas = [];
     arr.forEach(i => {
         i[1].forEach(j => {
-            for (let q in j) {
-                mas.push(j[q])
+            if (!Array.isArray(j)) {
+                for (let q in j) {
+                    mas.push(j[q])
+                }
+            } else {
+                j.forEach(w => {
+                    for (let q in w) {
+                        mas.push(w[q])
+                    }
+                });
             }
         });
     });
