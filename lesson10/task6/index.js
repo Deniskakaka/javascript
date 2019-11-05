@@ -2,8 +2,7 @@ function getRandomNumbers(length, min, max) {
     const mass = [];
     if (max < min) {
         return null;
-    }
-    if (!Number.isInteger(max - min)) {
+    } else if (!Number.isInteger(max - min)) {
         return null;
     } else {
         max = Math.trunc(max);
