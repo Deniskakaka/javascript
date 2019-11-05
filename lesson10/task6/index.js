@@ -4,11 +4,10 @@ function getRandomNumbers(length, min, max) {
         return null;
     } else if (!Number.isInteger(max - min)) {
         return null;
-    } else {
-        for (let i = 0; i < length; i++) {
-            mass.push(Math.floor(min + Math.random() * (max - min)));
-        }
-        return mass;
     }
+    for (let i = 0; i < length; i++) {
+        mass.push(Math.floor(min + Math.random() * (max - min)));
+    }
+    return mass;
 
 };
