@@ -27,9 +27,10 @@ function getNaN(arr) {
 };
 
 function getNaNV2(arr) {
-    const mass = arr.filter(i => {
+    const mass = [];
+    arr.map(i => {
         if (isNaN(i)) {
-            return i
+            mass.push(i)
         }
     });
     return mass;
