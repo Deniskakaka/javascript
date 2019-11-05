@@ -6,7 +6,7 @@ function getRandomNumbers(length, min, max) {
         return null;
     }
     for (let i = 0; i < length; i++) {
-        mass.push(Math.ceil(min + Math.random() * (max - min)));
+        mass.push(Math.round(min + Math.random() * (max - min)));
     }
     return mass;
 
