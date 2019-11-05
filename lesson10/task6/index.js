@@ -1,7 +1,7 @@
-function getRandomNumbers(length, min, max) {
+function getRandomNumbers(length, start, finish) {
     const mass = [];
-    max = Math.trunc(max);
-    min = Math.trunc(min)
+    max = Math.trunc(finish);
+    min = Math.trunc(start);
     if (max < min || (max - min) < 1) {
         return null;
     }
