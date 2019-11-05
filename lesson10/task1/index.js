@@ -12,7 +12,12 @@ function getFiniteNumbersV2(arr) {
 };
 
 function getNaN(arr) {
-    return arr.map(i => { return Number.isNaN(i) });
+    const mass = arr.filter(i => {
+        if (Number.isNaN(i)) {
+            return i
+        }
+    });
+    return mass;
 };
 
 function getNaNV2(arr) {
@@ -20,5 +25,10 @@ function getNaNV2(arr) {
 };
 
 function getIntegers(arr) {
-    return arr.map(i => { return !Number.isInteger(i) });
+    const mass = arr.filter(i => {
+        if (Number.isInteger(i)) {
+            return i
+        }
+    });
+    return mass;
 };
