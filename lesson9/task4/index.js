@@ -1,7 +1,6 @@
 function getPeople(obj) {
     const arr = Object.values(obj);
-    let mas = [];
-    mas.push(arr.map(i => i.map(j => { return j.name })).flat());
+    let mas = arr.map(i => i.map(j => { return j.name })).flat();
     console.log(mas)
 };
 
