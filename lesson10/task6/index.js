@@ -1,12 +1,17 @@
-function getRandomNumbers(length, start, finish) {
+function getRandomNumbers(length, min, max) {
     const mass = [];
-    max = Math.trunc(finish);
-    min = Math.trunc(start);
+    max = Math.trunc(max);
+    min = Math.trunc(min)
     if (max < min) {
         return null;
     }
+    if (!Number.isInteger(max - min)) {
+        return null;
+    }
+
     for (let i = 0; i < length; i++) {
-        mass.push(Math.floor(min + Math.random() * (max - min)));
+        mass.push(Math.round(min + Math.random() * (max - min)));
     }
     return mass;
+
 };
