@@ -5,12 +5,14 @@ function getRandomNumbers(length, min, max) {
     }
     if (!Number.isInteger(max - min)) {
         return null;
+    } else {
+        max = Math.trunc(max);
+        min = Math.trunc(min)
+        for (let i = 0; i < length; i++) {
+            mass.push(Math.round(min + Math.random() * (max - min)));
+        }
+        return mass;
     }
-    max = Math.trunc(max);
-    min = Math.trunc(min)
-    for (let i = 0; i < length; i++) {
-        mass.push(Math.round(min + Math.random() * (max - min)));
-    }
-    return mass;
+
 
 };
