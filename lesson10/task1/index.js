@@ -1,6 +1,6 @@
 function getFiniteNumbers(arr) {
-    const mass = arr.map(i => { return Number.isFinite(i) });
-    return mass
+    const mass = arr.map(i => { return !Number.isFinite(i) });
+    return;
 };
 
 function getFiniteNumbersV2(arr) {
