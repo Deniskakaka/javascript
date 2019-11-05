@@ -4,5 +4,5 @@ function getTotalPrice(arr) {
         count += i;
     });
 
-    return '$' + count.toFixed(2);
+    return '$' + count.toFixed();
 };
