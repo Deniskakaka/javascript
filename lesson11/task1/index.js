@@ -1,8 +1,14 @@
-function splitText(string, numberCut) {
+function splitText(text, numberCut) {
     let arr = [];
     let start = 0;
+    if (typeof text != 'string') {
+        return null;
+    }
+    if (numberCut === undefined) {
+        numberCut = 10;
+    }
     while (true) {
-        let str = string.substr(start, numberCut);
+        let str = text.substr(start, numberCut);
         if (str.length === 0) {
             break;
         }
@@ -12,4 +18,5 @@ function splitText(string, numberCut) {
     return arr.join('\n');
 };
 
-console.log(splitText('abcd efgh', 4));
+
+console.log(splitText('dfgfsdfgsdsdfsdgshbsfsdfsfsdf'))
