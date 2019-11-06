@@ -1,8 +1,10 @@
 function getTotalPrice(arr) {
-    let count = arr.reduce((acc, number) => {
-        return acc + Number(number.toFixed(2));
-    }, 0);
-    return '$' + (count.toFixed(2));
+    let sum = 0;
+    arr.forEach(i => {
+        sum += Number(i.toFixed(2));
+    });
+    let string = '$' + (sum.toFixed(2));
+    return string;
 };
 
 console.log(getTotalPrice([1.123, 1.6754, 1.9943, 5.333]));
