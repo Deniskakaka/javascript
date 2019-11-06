@@ -1,7 +1,7 @@
 function getTotalPrice(arr) {
     let sum = 0;
     sum = arr.reduce((acc, number) => {
-        return acc += Number(number.toFixed(2));
+        return acc += number;
     });
     return '$' + (sum).toFixed(2);
 };
