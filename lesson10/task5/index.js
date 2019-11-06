@@ -1,10 +1,7 @@
 function getTotalPrice(arr) {
     let sum = 0;
-    arr = arr.map(i => {
-        return Number(i.toFixed(2));
-    });
     sum = arr.reduce((acc, number) => {
-        return acc += number;
+        return acc += Number(number.toFixed(2));
     });
     return '$' + sum.toFixed(2);
 };
