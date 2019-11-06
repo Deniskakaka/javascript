@@ -7,13 +7,13 @@ function getRandomNumbers(length, min, max) {
         return null;
     }
     for (let i = 0; i < length; i++) {
-        mass.push(getRandomIntInclusive(min, max))
+        mass.push(getRandomInt(min, max))
     };
     return mass;
 };
 
-function getRandomIntInclusive(min, max) {
+function getRandomInt(min, max) {
     min = Math.ceil(min);
-    max = Math.ceil(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
 }
