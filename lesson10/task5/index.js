@@ -3,7 +3,7 @@ function getTotalPrice(arr) {
     arr.forEach(i => {
         sum += Number(i.toFixed(2));
     });
-    let string = '$' + (sum.toFixed(2));
+    let string = '$' + sum;
     return string;
 };
 
