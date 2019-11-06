@@ -8,8 +8,9 @@ function getRandomNumbers(length, min, max) {
     }
 
     for (let i = 0; i < length; i++) {
-        mass.push(Math.round(Math.random() * (max - min) + min));
+        mass.push(Math.random() * (max - min) + min);
     }
-    return mass;
-
+    console.log(mass);
 };
+
+getRandomNumbers(10, 1, 5);
