@@ -3,8 +3,10 @@ function getRandomNumbers(length, min, max) {
     if (max < min) {
         return null;
     }
-    if ((max - min) < 1) {
-        return null;
+    if (max - min === 0) {
+        for (let i = 0; i < length; i++) {
+            mass.push(getRandomInt(min, max))
+        };
     }
     for (let i = 0; i < length; i++) {
         mass.push(getRandomInt(min, max))
@@ -17,3 +19,5 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
 }
+
+console.log(getRandomNumbers(100, -0.1, 0.1))
