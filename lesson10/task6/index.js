@@ -3,7 +3,9 @@ function getRandomNumbers(length, min, max) {
     if (max < min) {
         return null;
     }
-
+    if (Math.abs(max - min) > 0.2 && Math.abs(max - min) < 1) {
+        return null
+    }
     for (let i = 0; i < length; i++) {
         mass.push(getRandomInt(min, max))
     };
