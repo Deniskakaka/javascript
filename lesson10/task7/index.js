@@ -1,7 +1,12 @@
-function superRound(number, float) {
-    let fraction = Number((number - parseInt(number)).toFixed(float));
-    return fraction;
-    [Math.floor(number) + fraction, Math.round(number) + fraction, Math.ceil(number) + fraction, Math.trunc(number) + fraction, Number(number.toFixed(float))]
+function superRound(num, float) {
+    const digits = Math.pow(10, float);
+    return [
+        Math.floor(num * digits) / digits,
+        Math.round(num * digits) / digits,
+        Math.ceil(num * digits) / digits,
+        Math.trunc(num * digits) / digits, +num.toFixed(float),
+    ];
 }
 
-console.log(superRound(-12.467567, 1));
+
+console.log(superRound(-12.467567, 4));
