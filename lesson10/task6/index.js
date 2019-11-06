@@ -8,7 +8,7 @@ function getRandomNumbers(length, min, max) {
     }
 
     for (let i = 0; i < length; i++) {
-        mass.push(Math.random() * (max - min) + min);
+        mass.push(Math.floor(Math.random() * (max - min) + min));
     }
     console.log(mass);
 };
