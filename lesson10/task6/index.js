@@ -3,6 +3,9 @@ function getRandomNumbers(length, min, max) {
     if (max < min) {
         return null;
     }
+    if (parseFloat(getRandomInt(min, max))) {
+        return null
+    }
     if (max - min === 0) {
         for (let i = 0; i < length; i++) {
             mass.push(getRandomInt(min, max))
