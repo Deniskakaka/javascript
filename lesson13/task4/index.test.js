@@ -21,6 +21,6 @@ it('should show string desicion', () => {
 });
 
 it('should show string desicion', () => {
-    const delet = calc(1 + 2);
-    expect(delet).toEqual(null);
+    const noString = calc(1 + 2);
+    expect(noString).toEqual(null);
 });
