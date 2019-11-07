@@ -1,8 +1,6 @@
 function cleanTransactionsList(arr) {
     arr = arr.filter((i, index) => {
-        if (!isNaN(i)) {
-            return i
-        }
+        return !isNaN(i)
     }).map(i => {
         return '$' + Number(i).toFixed(2)
     });
