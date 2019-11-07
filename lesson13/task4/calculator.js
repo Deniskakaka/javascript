@@ -1,7 +1,7 @@
 export const calc = string => {
+    if (typeof string !== 'string') return null;
     let [a, operator, b] = string.split(' ');
     let result;
-
     switch (operator) {
         case '+':
             result = Number(a) + Number(b);
@@ -23,4 +23,3 @@ export const calc = string => {
     };
     return '' + string + '' + ' = ' + '' + result + '';
 }
-console.log(calc('114 * 22'));
