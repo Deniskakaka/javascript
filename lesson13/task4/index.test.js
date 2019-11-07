@@ -1,31 +1,26 @@
-import { calc } from './calculator';
+import { calc } from './calculator.js'
 
-it('should get string', () => {
-    const result = calc('20 + 5');
-
-    expect(result).toEqual('20 + 5 = 25');
+it('should show string desicion', () => {
+    const plus = calc('2 + 1');
+    expect(plus).toEqual('2 + 1 = 3');
 });
 
-it('should get string', () => {
-    const result = calc('20 - 5');
-
-    expect(result).toEqual('20 - 5 = 15');
+it('should show string desicion', () => {
+    const minus = calc('2 - 1');
+    expect(minus).toEqual('2 - 1 = 1');
 });
 
-it('should get string', () => {
-    const result = calc('20 * 5');
-
-    expect(result).toEqual('20 * 5 = 100');
+it('should show string desicion', () => {
+    const multi = calc('2 * 2');
+    expect(multi).toEqual('2 * 2 = 4');
 });
 
-it('should get string', () => {
-    const result = calc('20 / 5');
-
-    expect(result).toEqual('20 / 5 = 4');
+it('should show string desicion', () => {
+    const delet = calc('2 / 2');
+    expect(delet).toEqual('2 / 2 = 1');
 });
 
-it('should get null', () => {
-    const result = calc(5);
-
-    expect(result).toEqual(null);
+it('should show string desicion', () => {
+    const delet = calc(1 + 2);
+    expect(delet).toEqual(null);
 });
