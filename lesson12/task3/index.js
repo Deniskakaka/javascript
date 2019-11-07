@@ -1,5 +1,4 @@
 function cleanTransactionsList(arr) {
-    let mass = []
     arr = arr.filter((i, index) => {
         if (typeof i == 'string' && !i.match(/[a-z]/i)) {
             return i
