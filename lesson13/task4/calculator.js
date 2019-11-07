@@ -23,3 +23,4 @@ export const calc = string => {
     };
     return '' + string + '' + ' = ' + '' + result + '';
 }
+console.log(calc('114 * 22'));
