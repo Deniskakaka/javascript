@@ -1,17 +1,10 @@
 function cleanTransactionsList(arr) {
     arr = arr.filter((i, index) => {
-        if (typeof i == 'string' && !i.match(/[a-z]/i)) {
+        if (!isNaN(i)) {
             return i
         }
-        if (Number(i)) {
-            return i;
-        }
     }).map(i => {
-        if (typeof i == 'string') {
-            return '$' + Number(i).toFixed(2)
-        } else {
-            return '$' + i.toFixed(2);
-        }
+        return '$' + Number(i).toFixed(2)
     });
     return arr;
 };
