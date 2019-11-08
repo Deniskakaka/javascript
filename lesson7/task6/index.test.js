@@ -6,3 +6,8 @@ it('should retrun reverse array', () => {
     expect(result).toEqual([4, 3, 2, 1]);
     expect(wrong).toEqual(null);
 });
+
+it('should retrun reverse array', () => {
+    let wrong = reverseArray('sdfasd' || 12 || true || function() {})
+    expect(wrong).toEqual(null);
+});

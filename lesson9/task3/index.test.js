@@ -22,6 +22,9 @@ it('should return of object array', () => {
             id: 'customer-id-1'
         },
     ]);
+});
+
+it('should return of object array', () => {
     let result2 = getCustomersList({});
     expect(result2).toEqual([]);
 });
