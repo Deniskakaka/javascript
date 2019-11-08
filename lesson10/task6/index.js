@@ -1,4 +1,4 @@
-function getRandomNumbers(length, min, max) {
+export function getRandomNumbers(length, min, max) {
     const mass = [];
     if (max < min || (max - min < 1) && Math.ceil(max) === Math.ceil(min)) {
         return null;
@@ -14,6 +14,3 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
 }
-
-console.log(getRandomNumbers(100, 1.3, 1.9));
-console.log(getRandomNumbers(100, -0.1, 0.1));

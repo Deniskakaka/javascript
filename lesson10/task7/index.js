@@ -1,4 +1,7 @@
-function superRound(num, float) {
+export function superRound(num, float) {
+    if (!Number(num) || !Number.isInteger(float)) {
+        return null;
+    }
     const digits = Math.pow(10, float);
     return [
         Math.floor(num * digits) / digits,
@@ -9,4 +12,4 @@ function superRound(num, float) {
 }
 
 
-console.log(superRound(-12.467567, 4));
+console.log(superRound(12.4, 4));

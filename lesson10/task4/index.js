@@ -8,3 +8,5 @@ function getMaxAbsoluteNumber(arr) {
     const max = Math.max(...mass);
     return max;
 };
+
+console.log(getMaxAbsoluteNumber([12, 23.5, 54.6, 44.43]));

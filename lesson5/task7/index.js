@@ -1,8 +1,3 @@
-function increaser(a, index) {
-    if (index < a) {
-        return a + index;
-    }
-    if (index > a) {
-        return a;
-    }
+export const increaser = (a, index) => {
+    return index < a ? a + index : a;
 }

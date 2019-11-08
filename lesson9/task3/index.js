@@ -1,4 +1,4 @@
-function getCustomersList(obj) {
+export function getCustomersList(obj) {
     let newObject = JSON.parse(JSON.stringify(obj))
     let arr = Object.entries(newObject);
     let mas = [];

@@ -1,9 +1,7 @@
-function getSum(numStart, numEnd) {
+export const getSum = (numStart, numEnd) => {
     let sum = 0;
     for (let i = numStart; i <= numEnd; i++) {
-        if (i % 2 === 0) {
-            sum += i;
-        }
+        i % 2 === 0 ? sum += i : 0;
     }
     return sum;
 };
