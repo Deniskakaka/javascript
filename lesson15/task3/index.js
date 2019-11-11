@@ -28,12 +28,8 @@ export function createLogger() {
                 return logger;
             };
             return logger.filter(i => {
-                if (i.type === str) {
-                    return i;
-                }
-            }).sort((a, b) => {
-                a.dateTime.getTime() - b.dateTime.getTime()
-            });
+                if (i.type === str) return i;
+            }).sort((a, b) => { a.dateTime.getTime() - b.dateTime.getTime() });
         }
     };
 };
