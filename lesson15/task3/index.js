@@ -28,7 +28,7 @@ export function createLogger() {
                 return logger;
             };
             return logger.filter(i => {
-                if (i.type === str) return i;
+                return i.type === str;
             }).sort((a, b) => { a.dateTime.getTime() - b.dateTime.getTime() });
         }
     };
