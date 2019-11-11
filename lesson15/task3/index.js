@@ -1,7 +1,7 @@
 export function createLogger() {
     let logger = [];
 
-    function warn(str) {
+    function warm(str) {
         logger.push({
             message: str,
             dateTime: new Date(),
