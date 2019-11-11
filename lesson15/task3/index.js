@@ -1,4 +1,4 @@
-export function creatLogger() {
+export function createLogger() {
     let logger = [];
 
     function warn(str) {
