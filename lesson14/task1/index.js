@@ -1,16 +1,11 @@
 'use strick';
 
-let message = 'Just learn it!'
+let message = 'Just learn it!';
 
-function sendMessage(name) {
-    const who = 'Gromcode';
+export function sendMessage(name) {
     console.log(`${name}, ${message} You ${who}`);
 };
 
-function setMessage(text) {
+export function setMessage(text) {
     message = text;
 };
-
-sendMessage('Ann');
-setMessage('Good job!');
-sendMessage('Ann');
