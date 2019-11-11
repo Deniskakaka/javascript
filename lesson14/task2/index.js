@@ -1,6 +1,6 @@
 'use strick';
 
-export function creatMessenger() {
+function creatMessenger() {
     let message = 'Just learn it!';
     let who = 'Gromcode';
 
@@ -21,3 +21,4 @@ export function creatMessenger() {
         setSender
     };
 }
+export default creatMessenger;
