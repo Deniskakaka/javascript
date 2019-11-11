@@ -13,7 +13,7 @@ function creatMessenger() {
     }
 
     function setSender(text) {
-        message = text;
+        who = text;
     }
     return {
         sendMessage,
