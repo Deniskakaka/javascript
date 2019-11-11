@@ -27,9 +27,7 @@ export function createLogger() {
             if (!str) {
                 return logger;
             };
-            return logger.filter(i => {
-                return i.type === str;
-            }).sort((a, b) => { a.dateTime.getTime() - b.dateTime.getTime() });
+            return logger.filter(i => i.type === str).sort((a, b) => a.dateTime.getTime() - b.dateTime.getTime());
         }
     };
 };
