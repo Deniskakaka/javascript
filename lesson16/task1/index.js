@@ -1,5 +1,5 @@
 let arr = [];
-const createArrayOfFunctions = (number) => {
+export const createArrayOfFunctions = (number) => {
     if (number === undefined) {
         return [];
     }
