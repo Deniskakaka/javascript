@@ -4,7 +4,7 @@ export const createArrayOfFunctions = (number) => {
         return null;
     }
     if (number === undefined) {
-        return arr;
+        return [];
     }
     for (let i = 0; i < number; i++) {
         arr[i] = function() {
