@@ -1,5 +1,5 @@
 let arr = [];
-const createArrayOfFunctions = (number) => {
+export const createArrayOfFunctions = (number) => {
     for (let i = 0; i < number; i++) {
         arr[i] = function() {
             return i
