@@ -1,15 +1,11 @@
-let arr = [];
-export const createArrayOfFunctions = (number) => {
-    if (number === undefined) {
-        return [];
-    }
-    if (typeof number !== 'number') {
-        return null;
-    }
-    for (let i = 0; i < number; i++) {
-        arr[i] = function() {
-            return i
-        }
-    }
-    return arr;
-};
+let a = 17;
+
+if (a) {
+
+    let a = 1;
+
+    console.log(a);
+
+}
+
+console.log(a);
