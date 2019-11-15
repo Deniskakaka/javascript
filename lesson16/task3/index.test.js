@@ -14,3 +14,8 @@ it('should array functions', () => {
     let result = createArrayOfFunctions('3');
     expect(result).toEqual(null);
 });
+
+it('should array functions', () => {
+    let result = typeof createArrayOfFunctions(9)[3];
+    expect(result).toEqual('function');
+});

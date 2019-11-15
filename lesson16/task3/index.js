@@ -1,5 +1,5 @@
-let arr = [];
 export const createArrayOfFunctions = (number) => {
+    let arr = [];
     if (number === undefined) {
         return [];
     }
