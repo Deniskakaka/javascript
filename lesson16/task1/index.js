@@ -1,10 +1,10 @@
 let arr = [];
-export const createArrayOfFunctions = (number) => {
-    if (typeof number !== 'number') {
-        return null;
-    }
+const createArrayOfFunctions = (number) => {
     if (number === undefined) {
         return [];
+    }
+    if (typeof number !== 'number') {
+        return null;
     }
     for (let i = 0; i < number; i++) {
         arr[i] = function() {
