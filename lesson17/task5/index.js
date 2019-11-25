@@ -24,8 +24,6 @@ export const timer = {
     },
     resetTimer() {
         this.minsPassed = 0;
-        this.secondPassed = 0;
+        this.secondsPassed = 0;
     }
 }
-
-timer.startTimer();
