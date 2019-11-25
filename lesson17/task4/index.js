@@ -9,6 +9,3 @@ export const user = {
         return `${this.firstName} ${this.lastName}`;
     }
 };
-
-user.setFullName('Denis', 'Skab');
-user.getFullName();
