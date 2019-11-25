@@ -4,7 +4,7 @@ export const timer = {
     minsPassed: 0,
     startTimer() {
         timerId = setInterval(() => {
-            this.secondsPassed = this.secondPassed + 5;
+            this.secondsPassed += 5;
             if (this.secondsPassed === 60) {
                 this.minsPassed++;
                 this.secondsPassed = 0;
