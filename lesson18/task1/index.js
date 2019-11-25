@@ -1,4 +1,4 @@
-export const event = {
+const event = {
     message: 'Welcome to the party!',
     guests: [
         { name: 'John', age: 18, email: 'example@server.com' },
@@ -8,7 +8,7 @@ export const event = {
         return this.guests.filter(i => i.age >= 18).map(i => {
             return {
                 email: `${i.email}`,
-                message: 'Dear ' + `${i.name}` + '! ' + `${this.message}`
+                message: `Dear ${i.name}! ${this.message}`
             }
         })
     }
