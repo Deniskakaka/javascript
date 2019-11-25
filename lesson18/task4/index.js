@@ -6,7 +6,7 @@ export function spy(func) {
 
     function wrapper(...args) {
         wrapper.calls.push(args);
-        return func.apply(this, args);
+        return func.apply(null, args);
     }
 
     wrapper.calls = [];
