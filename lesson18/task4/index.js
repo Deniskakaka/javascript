@@ -2,11 +2,11 @@ function test(a, b) {
     return Math.sqrt(a * a + b * b);
 };
 
-export function spy(func) {
+function spy(func) {
 
     function wrapper(...args) {
         wrapper.calls.push(args);
-        return func.apply(this, arguments);
+        return func;
     }
 
     wrapper.calls = [];
