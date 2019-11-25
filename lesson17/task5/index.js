@@ -13,10 +13,10 @@ export const timer = {
     },
     getTime() {
         if (this.secondPassed < 10) {
-            console.log(`${this.minsPassed}:${'0' + this.secondsPassed}`)
+            return `${this.minsPassed}:${'0' + this.secondsPassed}`;
         }
         if (this.secondPassed >= 10) {
-            console.log(`${this.minsPassed}:${this.secondsPassed}`)
+            return `${this.minsPassed}:${this.secondsPassed}`;
         }
     },
     stopTimer() {
