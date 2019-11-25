@@ -3,7 +3,7 @@
      showPrompt() {
          const number = prompt(this.message);
      },
-     showDeferrendPrompt(ms) {
+     showDeferredPrompt(ms) {
          setTimeout(this.showPrompt.bind(callbackPrompt), ms);
      }
  };
