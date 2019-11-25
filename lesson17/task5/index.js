@@ -1,5 +1,5 @@
 let timerId = 0;
-export const timer = {
+const timer = {
     secondsPassed: 0,
     minsPassed: 0,
     startTimer() {
@@ -12,10 +12,10 @@ export const timer = {
         }, 5000);
     },
     getTime() {
-        if (this.secondPassed < 10) {
+        if (this.secondsPassed < 10) {
             return `${this.minsPassed}:${'0' + this.secondsPassed}`;
         }
-        if (this.secondPassed >= 10) {
+        if (this.secondsPassed >= 10) {
             return `${this.minsPassed}:${this.secondsPassed}`;
         }
     },
