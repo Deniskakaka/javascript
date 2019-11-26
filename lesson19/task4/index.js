@@ -7,7 +7,7 @@ User.prototype.sayHi = function() {
     console.log(`Hi, I am ${this.name}`);
 };
 
-User.prototype.reguestNewPhoto = function() {
+User.prototype.requestNewPhoto = function() {
     console.log(`New photo request was sent for ${this.name}`);
 };
 
@@ -18,6 +18,6 @@ User.prototype.setAge = function(number) {
     if (number >= 25) {
         console.log(`New photo request was sent for ${this.name}`);
         this.age = number;
-        console.log(number)
+        return number;
     }
 }
