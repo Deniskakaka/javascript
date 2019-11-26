@@ -9,10 +9,10 @@ export const vehicle = {
 };
 
 export const ship = {
-    startMachine() {
+    liftAnchorUp() {
         console.log(`${this.name} lifting anchor up`);
     },
-    stopMachine() {
+    liftAnchorDown() {
         console.log(`${this.name} lifting anchor down`);
     },
 };
