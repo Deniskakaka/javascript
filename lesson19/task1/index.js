@@ -1,5 +1,4 @@
 export const vehicle = {
-    name: 'Argo',
     move() {
         console.log(`${this.name} is moving`);
     },
@@ -9,10 +8,11 @@ export const vehicle = {
 };
 
 export const ship = {
-    liftAnchorUp() {
+    name: 'Argo',
+    startMachine() {
         console.log(`${this.name} lifting anchor up`);
     },
-    liftAnchorDown() {
+    stopMachine() {
         console.log(`${this.name} lifting anchor down`);
     },
 };
