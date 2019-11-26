@@ -10,7 +10,7 @@ export class Order {
     }
 
     checkPrice() {
-        this.price < 1000 ? true : false;
+        return this.price < 1000 ? true : false;
     }
 
     confirmOrder() {
@@ -19,6 +19,6 @@ export class Order {
     }
 
     isVaildType(value) {
-        value === 'Buy' || value === 'Sale' ? true : false;
+        return value === 'Buy' || value === 'Sale' ? true : false;
     }
 };
