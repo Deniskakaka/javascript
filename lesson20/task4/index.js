@@ -10,7 +10,7 @@ export class Order {
     }
 
     checkPrice() {
-        return this.price < 1000 ? true : false;
+        return this.price < 1000 ? false : true;
     }
 
     confirmOrder() {
