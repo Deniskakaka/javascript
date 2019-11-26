@@ -16,5 +16,6 @@ export const ship = {
         console.log(`${this.name} lifting anchor down`);
     },
 };
-
+ship.mave();
+ship.stop();
 Object.setPrototypeOf(ship, vehicle);
