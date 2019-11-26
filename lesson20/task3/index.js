@@ -6,13 +6,13 @@ export class Wallet {
     }
 
     deposit(value) {
-        this.balance + value;
+        this.balance += value;
     }
 
     withdraw(value) {
         if (this.balance < value) {
             return 'No enough funds';
         }
-        this.balance - value;
+        this.balance -= value;
     }
 };
