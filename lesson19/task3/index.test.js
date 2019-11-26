@@ -1,4 +1,4 @@
-import { user } from './index.js'
+import user from './index.js'
 
 it('should full name', () => {
     let result = user.fullName = 'Tom Hardy';
