@@ -19,6 +19,6 @@ User.prototype.setAge = function(number) {
     if (number < 0) {
         return false;
     } else {
-        console.log(number);
+        return number;
     }
 };
