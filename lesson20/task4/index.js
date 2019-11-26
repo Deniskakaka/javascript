@@ -22,11 +22,9 @@ export class Order {
     }
 
     isVaildType(value) {
-        if (value === 'Buy') {
+        if (value === 'Buy' || value === 'Sale') {
             return true;
         }
-        if (value === 'Sale') {
-            return false;
-        }
+        return false;
     }
 };
