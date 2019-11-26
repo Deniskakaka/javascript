@@ -1,6 +1,6 @@
 export class Order {
+    id = Math.floor(1 + Math.random() * (100 + 1 - 1));
     constructor(price, city, type) {
-        this.id = Math.floor(1 + Math.random() * (100 + 1 - 1));
         this.price = price;
         this.dateCreated = new Date();
         this.isConfirmed = null;
@@ -10,9 +10,9 @@ export class Order {
 
     checkPrice() {
         if (this.price < 1000) {
-            console.log(false);
+            return false;
         }
-        console.log(true);
+        return true;
     }
 
     confirmOrder() {
