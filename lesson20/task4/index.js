@@ -3,7 +3,8 @@ export class Order {
     constructor(price, city, type) {
         this.price = price;
         this.dateCreated = new Date();
-        this.isConfirmed = null;
+        this.isConfirmed = false;
+        this.dateConfirmed = null;
         this.city = city;
         this.type = type;
     }
@@ -16,7 +17,7 @@ export class Order {
     }
 
     confirmOrder() {
-        this.isConfirmed = new Date();
+        this.dateConfirmed = new Date();
         this.isConfirmed = true;
     }
 
