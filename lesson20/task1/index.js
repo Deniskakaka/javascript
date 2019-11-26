@@ -4,6 +4,13 @@ export class User {
         this.age = age;
     }
 
+    static createEmpty() {
+        return {
+            name: '',
+            age: null
+        }
+    }
+
     sayHi() {
         console.log(`Hi, I am ${this.name}`);
     };
