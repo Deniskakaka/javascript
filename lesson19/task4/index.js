@@ -1,4 +1,4 @@
-export function User(a, b) {
+function User(a, b) {
     this.name = a
     this.age = b
 };
@@ -19,6 +19,6 @@ User.prototype.setAge = function(number) {
     if (number < 0) {
         return false;
     } else {
-        return number;
+        console.log(number);
     }
-}
+};
