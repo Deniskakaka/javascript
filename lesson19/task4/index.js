@@ -1,4 +1,4 @@
-function User(a, b) {
+export function User(a, b) {
     this.name = a
     this.age = b
 };
