@@ -1,6 +1,6 @@
 export class Order {
-    id = Math.floor(1 + Math.random() * (100 + 1 - 1));
     constructor(price, city, type) {
+        this.id = `${Math.floor(1 + Math.random() * (100 + 1 - 1))}`;
         this.price = price;
         this.dateCreated = new Date();
         this.isConfirmed = false;
