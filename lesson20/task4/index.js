@@ -1,27 +1,27 @@
 export class Order {
+
     constructor(price, city, type) {
-        this.id = `${Math.floor(1 + Math.random() * (100 + 1 - 1))}`;
-        this.price = price;
+        this.id = `${Math.random()}`;
         this.dateCreated = new Date();
         this.isConfirmed = false;
         this.dateConfirmed = null;
+        this.price = price;
         this.city = city;
         this.type = type;
     }
 
     checkPrice() {
-        return this.price < 1000 ? false : true;
+        if(this.price < 1000) return false;
+        return true;
     }
 
     confirmOrder() {
-        this.dateConfirmed = new Date();
         this.isConfirmed = true;
+        this.dateConfirmed = new Date();
     }
 
-    isVaildType() {
-        if (this.type === "Buy" || this.type === "Sell") {
-            return true
-        }
-        return false
+    isValidType() {
+        if(this.type === 'Buy' || this.type === 'Sell') return true;
+        return false;
     }
 };
