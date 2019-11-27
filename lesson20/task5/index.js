@@ -1,4 +1,4 @@
-export class User {
+ class User {
     constructor(id, name, sessionld) {
         this._id = id;
         this._name = name;
@@ -6,7 +6,7 @@ export class User {
     }
 };
 
-export class UserRepository{
+ class UserRepository{
     constructor (arr) {
         this._users =  Object.freeze(arr);
     }
@@ -20,11 +20,11 @@ export class UserRepository{
     }
 
     getUserNameById(id) {
-        let obj = this._users.filter(i => i._id === id);
-        if (obj.length < 1) {
-            return obj;
-        }
-        return obj[0]._name
+        let obj = this._users.find(i => i._id === id);
+        if (obj === undefined) {
+            return [];
+        } 
+        return obj._name
     }
 };
 
@@ -40,4 +40,4 @@ const arr = [
  const Users = new UserRepository(arr);
 
 
-console.log(Users.getUserNameById())
+console.log(Users.getUserNameById(3))
