@@ -1,4 +1,4 @@
-class User {
+export class User {
     constructor(id, name, sessionld) {
         this._id = id;
         this._name = name;
