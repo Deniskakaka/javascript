@@ -21,10 +21,8 @@ export class UserRepository{
 
     getUserNameById(id) {
         let obj = this._users.find(i => i._id === id);
-        if (obj === undefined) {
-            return [];
-        } 
-        return obj._name
+        return  obj === undefined ? [] : obj._name;
+        
     }
 };
 
