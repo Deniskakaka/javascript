@@ -19,9 +19,12 @@ export class Order {
     }
 
     isVaildType(value) {
-        if (value === "Buy" || value === "Sell") {
+        if (value === "Buy") {
             return true
         }
-        return false
+        if (value === "Sell") {
+             return false
+        }
+       
     }
 };
