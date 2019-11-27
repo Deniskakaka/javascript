@@ -18,7 +18,7 @@ export class Order {
         this.isConfirmed = true;
     }
 
-    isVaildType() {
+    isValidType() {
         if (this.type === "Buy" || this.type === "Sell") {
             return true;
         }
