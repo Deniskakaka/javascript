@@ -19,6 +19,6 @@ export class Order {
     }
 
     isVaildType(value) {
-        return value === 'Buy' || value === 'Sale' ? true : false;
+        return value === 'Buy' || value === 'Sell' ? true : false;
     }
 };
