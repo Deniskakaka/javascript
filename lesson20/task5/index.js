@@ -6,7 +6,7 @@ export class User {
     }
 };
 
-class UserRepository{
+export class UserRepository{
     constructor (arr) {
         this._users =  Object.freeze(arr);
     }
