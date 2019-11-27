@@ -12,18 +12,17 @@ export class UserRepository{
     }
 
     getUserNames() {
-       let masName = [];
-       masName.push(this._users.map(i => i._name));
-       return masName
+       return  this._users.map(i => i._name);
     }
 
     getUselds() {
-       let masId = [];
-       masId.push(this._users.map(i => i._id));
-       return masId;
+       return this._users.map(i => i._id);
     }
 
     getUserNameById(id) {
-       return this._users.filter(i => i._id === id);
+        let obj = this._users.filter(i => i._id === id);
+        return obj[0]._name
     }
 };
+
+
