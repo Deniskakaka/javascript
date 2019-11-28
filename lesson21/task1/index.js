@@ -26,3 +26,12 @@ function render (arr) {
 };
 
 render(tasks);
+
+var counterArray = {
+    A : 3,
+    B : 4,
+    a : [1,2,3]
+  };
+  counterArray["C"] = 1;
+ let a = 'dsfsdfgsgsfsdfhgtrhr'
+  console.log(Array.from(a))
