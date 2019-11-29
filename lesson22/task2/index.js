@@ -1,11 +1,11 @@
 const creat = document.querySelector(".create-task-btn");
 
 let tasks =   [
-    { text: 'Buy milk', done: false },
-    { text: 'Pick up Tom from airport', done: false },
     { text: 'Visit party', done: false },
-    { text: 'Visit doctor', done: true },
+    { text: 'Pick up Tom from airport', done: false },
+    { text: 'Buy milk', done: false },
     { text: 'Buy meat', done: true },
+    { text: 'Visit doctor', done: true }
 ];
 
 const creatObj = () => {
