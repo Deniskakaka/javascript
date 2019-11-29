@@ -17,7 +17,7 @@ const creatObj = () => {
         }
     };
     let newTask = new task(inputText);
-    tasks.push(newTask);
+    tasks.unshift(newTask);
     render(tasks)
 }
 
