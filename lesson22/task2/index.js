@@ -8,17 +8,15 @@ let tasks =   [
     { text: 'Visit doctor', done: true }
 ];
 
+
 const creatObj = () => {
-    let inputText = document.querySelector(".task-input").value;
-    class task {
-        constructor (text) {
-            this.text = text,
-            this.done = false
-        }
+    const inputText = document.querySelector(".task-input").value;
+    const obj =  {
+        text: inputText,
+        done: false
     };
-    let newTask = new task(inputText);
-    tasks.unshift(newTask);
-    render(tasks)
+    tasks.unshift(obj);
+    render(tasks);
 }
 
 creat.addEventListener('click', creatObj);
@@ -43,17 +41,23 @@ function render (arr) {
     return list.append(...listItems);
 };
 
-render(tasks);
 
+render(tasks);
 document.querySelector('.list').addEventListener('click',function (event) {
     if (event.target.className === 'list__item-checkbox') {
         event.target.parentElement.classList.toggle('done');
-        let elements = document.querySelectorAll(".list__item");
-        for (let i = 0; i < elements.length; i++) {
-           if (elements[i].className === 'list__item done') {
-               document.querySelector('.list').append(elements[i])
-           }
-        }
+        const stringText = event.target.parentElement.textContent;
+        tasks.map((elem) => {
+            if (elem.text === stringText) {
+                if (elem.done === false) {
+                    elem.done = true
+                }
+                else if (elem.done === true) {
+                    elem.done = false
+                }
+            }
+        });
+        render(tasks);
     }
 });
 
