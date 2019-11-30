@@ -49,12 +49,7 @@ document.querySelector('.list').addEventListener('click',function (event) {
         const stringText = event.target.parentElement.textContent;
         tasks.map((elem) => {
             if (elem.text === stringText) {
-                if (elem.done === false) {
-                    elem.done = true
-                }
-                else if (elem.done === true) {
-                    elem.done = false
-                }
+                elem.done === false ? elem.done = true : elem.done = false;
             }
         });
         render(tasks);
