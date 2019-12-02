@@ -1,5 +1,5 @@
 
- function getDiff(startDate,endDate) {
+export function getDiff(startDate,endDate) {
    let DiffTime = startDate - endDate;
    let second = (parseInt(DiffTime / 1000));
    let days = Math.trunc(second / (24 * 60 * 60));
