@@ -1,7 +1,7 @@
 const mounth = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
 ];
-export function studentsBirthDays(students) {
+ function studentsBirthDays(students) {
     let obj = {};
     students.sort((a,b) => new Date(a.birthDate).getDate() - new Date(b.birthDate).getDate())
     .map(i => {
