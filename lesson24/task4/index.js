@@ -3,7 +3,7 @@ const mounth = [
 ];
 export function studentsBirthDays(students) {
     let obj = {};
-    students.sort((a,b) => new Date(a.birthDay).getFullYear() - new Date(b.birthDay).getFullYear())
+    students.sort((a,b) => new Date(a.birthDay).getDate() - new Date(b.birthDay).getDate())
     .map(i => {
         if (obj[mounth[new Date(i.birthDay).getMonth()]] === undefined) {
             obj[mounth[new Date(i.birthDay).getMonth()]] = [];
@@ -12,3 +12,4 @@ export function studentsBirthDays(students) {
     });
     return obj;
 };
+
