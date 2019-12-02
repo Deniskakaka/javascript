@@ -1,10 +1,10 @@
 
 export function getDiff(startDate,endDate) {
-   let mounth = Math.abs(startDate.getMonth() - endDate.getMonth() )* 30;
-   let yearInDays = Math.abs(startDate.getFullYear() - endDate.getFullYear()) * 365;
-   let days =  mounth + (Math.abs(startDate.getDate() - endDate.getDate())) + yearInDays;
-   let hour = Math.abs(startDate.getHours() - endDate.getHours());
-   let minut = Math.abs(startDate.getMinutes() - endDate.getMinutes());
-   let second = Math.abs(startDate.getSeconds() - endDate.getSeconds())
+   let mounth = Math.abs(endDate.getMonth() - startDate.getMonth() )* 30;
+   let yearInDays = Math.abs(endDate.getFullYear() - startDate.getFullYear()) * 365;
+   let days =  mounth + (Math.abs(endDate.getDate() - startDate.getDate())) + yearInDays;
+   let hour = Math.abs(endDate.getHours() - startDate.getHours());
+   let minut = Math.abs(endDate.getMinutes() - startDate.getMinutes());
+   let second = Math.abs(endDate.getSeconds() - startDate.getSeconds())
    return `${days}d ${hour}h ${minut}m ${second}s`;
 };
