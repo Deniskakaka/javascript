@@ -1,5 +1,5 @@
 
-export function getDiff(startDate,endDate) {
+ function getDiff(startDate,endDate) {
    let DiffTime = startDate - endDate;
    let second = (parseInt(DiffTime / 1000));
    let days = Math.trunc(second / (24 * 60 * 60));
@@ -8,11 +8,11 @@ export function getDiff(startDate,endDate) {
    let secInLastHour = secondInLastDay - hour * 3600;
    let minut = (parseInt(secInLastHour / 60));
    let sec = secInLastHour - minut * 60;
-   return `${days}d ${hour}h ${minut}m ${sec}s`
+   return `${Math.abs(days)}d ${Math.abs(hour)}h ${Math.abs(minut)}m ${Math.abs(sec)}s`
 };
 
 
-const startDate = new Date(Date.UTC(2019, 10, 24, 20, 50, 34));
-const endDate = new Date(Date.UTC(2019, 5, 22, 17, 52, 18));
+const startDate = new Date(Date.UTC(2019, 5, 22, 17, 52, 18));
+const endDate = new Date(Date.UTC(2019, 10, 24, 20, 50, 34));
 
 console.log(getDiff(startDate,endDate));
