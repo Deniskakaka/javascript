@@ -1,5 +1,5 @@
 
-function getDiff(startDate,endDate) {
+export function getDiff(startDate,endDate) {
    let mounth = Math.abs(startDate.getMonth() - endDate.getMonth() )* 30;
    let yearInDays = Math.abs(startDate.getFullYear() - endDate.getFullYear()) * 365;
    let days =  mounth + (Math.abs(startDate.getDate() - endDate.getDate())) + yearInDays;
