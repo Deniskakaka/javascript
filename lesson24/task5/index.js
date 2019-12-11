@@ -38,6 +38,7 @@ function render (arr) {
 
 
 render(tasks);
+
 document.querySelector('.list').addEventListener('click',function (event) {
     if (event.target.className === 'list__item-checkbox') {
         event.target.parentElement.classList.toggle('done');
