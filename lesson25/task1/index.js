@@ -1,7 +1,4 @@
-localStorage.clear();
-localStorage.setItem('hobbies', JSON.stringify({name: 'Tom'}));
-localStorage.setItem('name', 'Tom');
-localStorage.setItem('age', JSON.stringify(17));
+
 
 export function getLocalStorageData () {
     return Object.entries(localStorage)
@@ -19,4 +16,3 @@ export function getLocalStorageData () {
         },{});
 };
 
-console.log(getLocalStorageData());
