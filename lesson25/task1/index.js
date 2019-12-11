@@ -1,4 +1,4 @@
-export function getLocalStorageDate () {
+export function getLocalStorageData () {
     return Object.entries(localStorage)
         .reduce((acc,[key,value]) => {
             let newValue;
