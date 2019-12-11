@@ -15,8 +15,10 @@ const creatObj = () => {
     localStorage.clear();
     localStorage.setItem('massTasks', JSON.stringify(tasks));
 }
-
-let tasks = JSON.parse(localStorage.getItem('massTasks'));;
+let tasks = [];
+if (JSON.parse(localStorage.getItem('massTasks'))) {
+   tasks = JSON.parse(localStorage.getItem('massTasks')); 
+}
 creat.addEventListener('click', creatObj);
 console.log(tasks)
 function render (arr) {
