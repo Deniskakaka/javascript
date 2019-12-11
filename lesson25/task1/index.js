@@ -1,5 +1,3 @@
-
-
 export function getLocalStorageData () {
     return Object.entries(localStorage)
         .reduce((acc,[key,value]) => {
@@ -11,8 +9,8 @@ export function getLocalStorageData () {
             }
             return {
                 ...acc,
-                [key]: newvalue,
-            }
+                [key]: newValue,
+            };
         },{});
 };
 
