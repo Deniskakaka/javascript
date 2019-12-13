@@ -1,4 +1,4 @@
-export function showmoment (value) {
+export function shmoment (value) {
     let result;
 
     const time = {
