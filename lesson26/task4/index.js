@@ -22,7 +22,7 @@ export function shmoment (value) {
             if (str === 'years') result = value.setFullYear(value.getFullYear() - val);
             return this
         },
-        result () {
+        result() {
             return new Date(result);
         }
     }
