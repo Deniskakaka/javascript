@@ -1,4 +1,4 @@
-function shmoment (value) {
+export function shmoment (value) {
     let result;
 
     const getMethodAdd =  {
