@@ -8,7 +8,7 @@ export function shmoment (value) {
             if (str === 'milliseconds') result = value.setMilliseconds(value.getMilliseconds() + val);
             if (str === 'hours') result = value.setHours(value.getHours() + val);
             if (str === 'days') result = value.setDate(value.getDate() + val);
-            if (str === 'month') result = value.setMonth(value.getMonth() + val);
+            if (str === 'months') result = value.setMonth(value.getMonth() + val);
             if (str === 'years') result = value.setFullYear(value.getFullYear() + val);
             return this
         },
@@ -18,7 +18,7 @@ export function shmoment (value) {
             if (str === 'milliseconds') result = value.setMilliseconds(value.getMilliseconds() - val);
             if (str === 'hours') result = value.setHours(value.getHours() - val);
             if (str === 'days') result = value.setDate(value.getDate() - val);
-            if (str === 'month') result = value.setMonth(value.getMonth() - val);
+            if (str === 'months') result = value.setMonth(value.getMonth() - val);
             if (str === 'years') result = value.setFullYear(value.getFullYear() - val);
             return this
         },
