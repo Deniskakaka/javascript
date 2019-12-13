@@ -1,4 +1,4 @@
-export function shmoment (value) {
+function shmoment (value) {
     let result;
 
     const getMethodAdd =  {
@@ -17,7 +17,7 @@ export function shmoment (value) {
         hours: function(val){ return value.setHours(value.getHours() - val)},
         minutes: function(val){ return  value.setMinutes(value.getMinutes() - val)},
         seconds: function(val){ return value.setSeconds(value.getSeconds() - val)},
-        milliseconds: function(val){ return value.setMilliseconds(value.getMilliseconds() + val)},
+        milliseconds: function(val){ return value.setMilliseconds(value.getMilliseconds() - val)},
     }
 
     const time = {
@@ -36,6 +36,6 @@ export function shmoment (value) {
     return time;
 };
 
-console.log(shmoment(new Date(2020, 0, 7, 17, 17, 17)).add('days', 2).subtract('years',10).result())
+console.log(shmoment(new Date(2020, 0, 7, 17, 17, 17)).subtract('milliseconds',1231312414234).result())
 
 
