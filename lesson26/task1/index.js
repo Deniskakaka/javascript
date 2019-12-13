@@ -1,4 +1,4 @@
-function calc (value) {
+export function calc (value) {
     let result = value;
 
     const calculator = {
