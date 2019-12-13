@@ -1,5 +1,5 @@
 export function shmoment (value) {
-    let result;
+    let result = value;
 
     const getMethodAdd =  {
         years: function(val){ return value.setFullYear(value.getFullYear() + val)},
@@ -36,6 +36,6 @@ export function shmoment (value) {
     return time;
 };
 
-console.log(shmoment(new Date(2020, 0, 7, 17, 17, 17)).subtract('milliseconds',1231312414234).result())
+console.log(shmoment(new Date(2020, 0, 7, 17, 17, 17)).add('minutes', 2).add('days', 8).subtract('years', 1).result())
 
 
