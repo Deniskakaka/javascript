@@ -23,7 +23,7 @@ export function shmoment (value) {
             return this
         },
         result () {
-            return result;
+            return new Date(result);
         }
     }
     return time;
