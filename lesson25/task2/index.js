@@ -16,5 +16,6 @@ const counterChange = e => {
 counter.addEventListener('click',counterChange); 
 
 window.addEventListener('storage', (e) => {
+    console.log(e)
     counterValueElement.textContent = e.newValue;
 });
