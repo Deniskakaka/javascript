@@ -3,20 +3,20 @@ export function shmoment (value) {
 
     const getMethodAdd =  {
         years: function(val){ return value.setFullYear(value.getFullYear() + val)},
-        month: function(val){ return value.setMonth(value.getMonth() + val)},
+        months: function(val){ return value.setMonth(value.getMonth() + val)},
         days: function(val){ return value.setDate(value.getDate() + val)},
         hours: function(val){ return value.setHours(value.getHours() + val)},
         minutes: function(val){ return  value.setMinutes(value.getMinutes() + val)},
-        second: function(val){ return value.setSeconds(value.getSeconds() + val)},
+        seconds: function(val){ return value.setSeconds(value.getSeconds() + val)},
         milliseconds: function(val){ return value.setMilliseconds(value.getMilliseconds() + val)},
     }
     const getMethodSub =  {
         years: function(val){ return value.setFullYear(value.getFullYear() - val)},
-        month: function(val){ return value.setMonth(value.getMonth() - val)},
+        months: function(val){ return value.setMonth(value.getMonth() - val)},
         days: function(val){ return value.setDate(value.getDate() - val)},
         hours: function(val){ return value.setHours(value.getHours() - val)},
         minutes: function(val){ return  value.setMinutes(value.getMinutes() - val)},
-        second: function(val){ return value.setSeconds(value.getSeconds() - val)},
+        seconds: function(val){ return value.setSeconds(value.getSeconds() - val)},
         milliseconds: function(val){ return value.setMilliseconds(value.getMilliseconds() + val)},
     }
 
