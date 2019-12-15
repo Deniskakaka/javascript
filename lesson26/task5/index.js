@@ -1,4 +1,4 @@
-function maxFibonacci(value) {
+export function maxFibonacci(value) {
     if (value <= 1) {
        return value
     }
