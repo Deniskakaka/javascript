@@ -1,4 +1,4 @@
-function sum(value) {
+export function sum(value) {
    return  value == 1 ? 1 : value + sum(value - 1)
 };
 
