@@ -1,4 +1,4 @@
-function maxFibonacci(n) {
+export function maxFibonacci(n) {
   let a = 1, b = 1;
   if (n <= 1) {
     return 0;
