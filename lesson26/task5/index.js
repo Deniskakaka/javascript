@@ -1,15 +1,10 @@
- export function maxFibonacci(n) {
+ function maxFibonacci(n) {
   let a = 1, b = 1;
-  if (n <= 1) {
-    return n;
-  }
   for (let i = 2; i <= n; i++) {
     let c = a + b;
     a = b;
     b = c;
     if (b >= n) return a
   }         
- return b;
+  return b;
  }
-
-console.log(maxFibonacci(0))
