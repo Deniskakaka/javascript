@@ -12,5 +12,3 @@ export function maxFibonacci(value) {
     }
   }
 }
-
-console.log(maxFibonacci(15))
