@@ -1,3 +1,9 @@
-export function maxFibonacci(value) {
-    return value <= 1 ? value : maxFibonacci(value - 1) + maxFibonacci(value - 2);
+function maxFibonacci(value) {
+    if (value <= 1) {
+       return value
+    }
+    return value - maxFibonacci(value - 1) + maxFibonacci(value - 2);
+
 }
+
+
