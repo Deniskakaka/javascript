@@ -1,9 +1,14 @@
 export function maxFibonacci(value) {
-    if (value <= 1) {
-       return value
-    }
-    return value - maxFibonacci(value - 1) + maxFibonacci(value - 2);
-
+   let a = 1;
+   let b = 1;
+   for (let i = 3; i <= value; i++) {
+       let c = a + b;
+       a = b;
+       b = c;
+       if (b >= value) return a;
+   }
+   return b;
 }
 
 
+console.log(maxFibonacci(10))
