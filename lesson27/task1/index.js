@@ -1,7 +1,7 @@
-export const addImage = (url,callback) => {
+export const addImage = (imgSrc,callback) => {
     const imgElem = document.createElement('img');
-    imgElem.setAttribute('alt','photo');
-    imgElem.src = url;
+    imgElem.setAttribute('alt','My Photo');
+    imgElem.src = imgSrc;
     const containerElem = document.querySelector('.page');
     containerElem.append(imgElem);
 
@@ -14,5 +14,3 @@ export const addImage = (url,callback) => {
 
     imgElem.addEventListener('error', () => callback('Image load failed'));
 };
-
-addImage('https://server.com/image.png', onImageLoaded);
