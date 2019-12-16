@@ -1,6 +1,6 @@
 export function maxFibonacci(n) {
   let a = 0, b = 1;
-  if(n < 1) {
+  if(n <= 1) {
     return 0;
   }
   for (let i = 2; i <= n; i++) {
@@ -12,4 +12,4 @@ export function maxFibonacci(n) {
   return b;
 }
 
-console.log(maxFibonacci(29.1));
+console.log(maxFibonacci(15));
