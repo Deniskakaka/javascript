@@ -5,7 +5,7 @@ export const requestUserData = (userId, callback) =>{
                  callback(null,'Failed to load user data');
                  return;
             } else {
-               callback({ name: 'John', age: 17, userId: 'userid777', email: `${userId}`});
+               callback({ name: 'John', age: 17, userId: 'userid777', email:});
             }    
         }, random * 1000);
 }
