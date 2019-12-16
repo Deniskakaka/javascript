@@ -5,7 +5,7 @@ export const requestUserData = (userId, callback) =>{
     return;
     } else {
         setTimeout(() => {
-            callback({ name: 'John', age: 17, userId: 'userid777', email: 'userid777@example.com' });
+            callback(userId);
         }, random * 1000);
     }
 }
