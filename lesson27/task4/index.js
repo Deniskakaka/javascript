@@ -1,10 +1,11 @@
 export const requestUserData = (userId, callback) =>{
     let random = Math.floor(getRandomArbitrary(1, 4));
     if (userId === 'broken') {
-      return  callback('Failed to load user data');
+      callback('Failed to load user data');
+    return;
     } else {
         setTimeout(() => {
-            return callback({ name: 'John', age: 17, userId: 'userid777', email: 'userid777@example.com' });
+            callback({ name: 'John', age: 17, userId: 'userid777', email: 'userid777@example.com' });
         }, random * 1000);
     }
 }
