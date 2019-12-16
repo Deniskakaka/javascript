@@ -11,3 +11,5 @@ export function maxFibonacci(n) {
   }         
   return b;
 };
+
+console.log(maxFibonacci(8))
