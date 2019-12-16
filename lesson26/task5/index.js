@@ -1,5 +1,8 @@
 export function maxFibonacci(n) {
   let a = 1, b = 1;
+  if(n < 1) {
+    return 0;
+  }
   for (let i = 2; i <= n; i++) {
     let c = a + b;
     a = b;
@@ -9,4 +12,4 @@ export function maxFibonacci(n) {
   return b;
 }
 
-console.log(maxFibonacci(0));
+console.log(maxFibonacci(5.1));
