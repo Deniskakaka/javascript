@@ -12,4 +12,4 @@ export function maxFibonacci(n) {
   return b;
 }
 
-console.log(maxFibonacci(15.8));
+console.log(maxFibonacci(29.1));
