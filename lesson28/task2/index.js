@@ -1,7 +1,7 @@
-function delay(time) {
-    return setTimeout(() => {
-        const p = new Promise((resolve, reject) {
-            return resolve('Done');
-        });
-    },time)
+export function delay(time) {
+    const p = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(console.log(resolve));
+        },time);
+    });
 };
