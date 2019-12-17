@@ -1,6 +1,6 @@
 function getSum(numbers) {
     numbers.filter(value => !isNaN(value))
-           .reduse((acc,num) => acc + num,0);
+           .reduse((acc,num) => acc + Number(num), 0);
 }
 export const asyncSum = (...asyncNumber) => {
     return Promise.all(asyncNumber)
