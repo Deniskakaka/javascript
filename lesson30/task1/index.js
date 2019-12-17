@@ -10,7 +10,7 @@ function getValueWithDelay(value, delay) {
 const getSum = (numbers) =>
     numbers
         .filter(value => !isNaN(value))
-        .reduсe((acc,num) => acc + Number(num), 0);
+        .reduce((acc,num) => acc + Number(num), 0);
         
 export const asyncSum = (...asyncNumber) => {
     return Promise.all(asyncNumber)
