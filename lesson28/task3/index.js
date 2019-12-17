@@ -1,6 +1,6 @@
 import{addImage} from './addImage.js'
 
- function addImageV2(imgSrc) {
+export function addImageV2(imgSrc) {
     return new Promise((resolve, reject) => {
         addImage(imgSrc, (error, data) => {
             if (error) {
