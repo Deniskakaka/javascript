@@ -1,4 +1,4 @@
-import{addImage} from './add.js'
+import{addImage} from './addImage.js'
 
  function addImageV2(imgSrc) {
     return new Promise((resolve, reject) => {
@@ -12,4 +12,3 @@ import{addImage} from './add.js'
     });
 };
 
-addImageV2('https://images.wallpaperscraft.ru/image/tuman_derevia_sklon_153126_1920x1080.jpg');
