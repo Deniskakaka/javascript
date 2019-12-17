@@ -1,18 +1,15 @@
-export function addImageV2(imgSrc) {
-    const imgElem = document.createElement('img');
-    imgElem.setAttribute('alt','My Photo');
-    imgElem.src = imgSrc;
-    const containerElem = document.querySelector('.page');
-    containerElem.append(imgElem);
+import{addImage} from './add.js'
+
+ function addImageV2(imgSrc) {
     return new Promise((resolve, reject) => {
-        const addImage = (imgSrc, (error, data) => {
+        addImage(imgSrc, (error, data) => {
             if (error) {
                 reject(error);
-                return
+                return;
             }
             resolve(data);
         });
     });
 };
 
-//addImageV2('https://st2.depositphotos.com/3324449/6393/i/450/depositphotos_63937059-stock-photo-rose-placed-on-the-books.jpg');
+addImageV2('https://images.wallpaperscraft.ru/image/tuman_derevia_sklon_153126_1920x1080.jpg');
