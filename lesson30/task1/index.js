@@ -1,10 +1,11 @@
-export const asyncSum = (...asyncNumber) => {
-    return Promise.all(asyncNumber)
+export function asyncSum(...asyncNumbers) {
+    return Promise.all(asyncNumbers)
         .then(numbers => getSum(numbers))
-        .catch(() => Promise.reject(new Error('Can\'t calculate')))
+        .catch(() => Promise.reject(new Error('Can\'t calculate')));
 };
 
-const getSum = (numbers) =>
-    numbers
-        .filter(value => !isNaN(value))
-        .reduse((acc,num) => acc + Number(num), 0);
+function getSum(numbers) {
+    return numbers
+        .filter(elem => !isNaN(elem))
+        .reduce((acc, elem) => acc + Number(elem), 0);
+};
