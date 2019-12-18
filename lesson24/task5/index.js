@@ -43,8 +43,8 @@ const check = (event) => {
     if (event.target.className === 'list__item-checkbox') {
         event.target.parentElement.classList.toggle('done');
         const stringText = event.target.parentElement.textContent;
-        
-        tasks.map((elem) => {
+        tasks.forEach(i => i.dataCreate = new Date())
+        tasks.sort((a,b) => b.dataCreate - a.dataCreate).map((elem) => {
             if (elem.text === stringText) {
                 elem.done === false ? elem.done = true : elem.done = false;
             }
