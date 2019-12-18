@@ -1,5 +1,5 @@
 const creat = document.querySelector(".create-task-btn");
-
+const list = document.querySelector('.list');
 let tasks =  [];
 
 
@@ -39,16 +39,20 @@ function render (arr) {
 
 render(tasks);
 
-document.querySelector('.list').addEventListener('click',function (event) {
+const check = (event) => {
     if (event.target.className === 'list__item-checkbox') {
         event.target.parentElement.classList.toggle('done');
         const stringText = event.target.parentElement.textContent;
-        tasks.sort((a,b) => b.dataCreate - a.dataCreate).map((elem) => {
+        
+        tasks.map((elem) => {
             if (elem.text === stringText) {
                 elem.done === false ? elem.done = true : elem.done = false;
             }
         });
         render(tasks);
     }
-});
+}
+
+
+list.addEventListener('click', check);
 
