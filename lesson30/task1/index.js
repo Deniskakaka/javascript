@@ -12,7 +12,7 @@ const getSum = (numbers) =>
         .filter(value => !isNaN(value))
         .reduce((acc,num) => acc + Number(num), 0);
         
-const asyncSum = (...asyncNumber) => {
+export const asyncSum = (...asyncNumber) => {
     return Promise.all(asyncNumber)
         .then(numbers => getSum(numbers))
         .catch(() => Promise.reject(new Error('Can\'t calculate')))
