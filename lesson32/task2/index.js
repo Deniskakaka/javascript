@@ -34,7 +34,7 @@ function render(days, value) {
     name.textContent = mass[0].name;
 }
 
-function getMostActiveDevs(obj) {
+export function getMostActiveDevs(obj) {
       fetchUser(obj.userId,obj.repoId).then(result => render(obj.days, result));
 }
 
