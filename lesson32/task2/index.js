@@ -45,7 +45,7 @@ function getMassUsers(days, value) {
 
 
 
-function getMostActiveDevs(obj) {
+export function getMostActiveDevs(obj) {
       fetchUser(obj.userId,obj.repoId)
       .then(result => getMassUsers(obj.days, result));
 }
