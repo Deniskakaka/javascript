@@ -5,11 +5,6 @@ let number = document.querySelector('.number');
 let user = document.querySelector('.userId');
 let repo = document.querySelector('.repoId');
 
-function fetchUser(userId, repoId) {
-    return fetch(`https://api.github.com/repos/${userId}/${repoId}/commits`)
-           .then(response => response.json())
-}
-
 function render(value,mass) {
     const avatarUrl = value.filter(i => i.commit.author.email === mass[0].email).map(i => i.author.avatar_url)[0]
     avatar.src = avatarUrl;
@@ -43,11 +38,10 @@ function getMassUsers(days, value) {
     return  mass.filter(({count}) => topUser === count);
 }
 
-
-
 export function getMostActiveDevs(obj) {
-      fetchUser(obj.userId,obj.repoId)
-      .then(result => getMassUsers(obj.days, result));
+    fetch(`https://api.github.com/repos/${obj.userId}/${obj.repoId}/commits`)
+        .then(response => response.json())
+        .then(result => getMassUsers(obj.days, result));
 }
 
 search.addEventListener('click', () => {
