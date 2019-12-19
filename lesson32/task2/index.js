@@ -10,7 +10,13 @@ function fetchUser(userId, repoId) {
            .then(response => response.json())
 }
 
-function render(days, value) {
+function render(value,mass) {
+    const avatarUrl = value.filter(i => i.commit.author.email === mass[0].email).map(i => i.author.avatar_url)[0]
+    avatar.src = avatarUrl;
+    name.textContent = mass[0].name;
+}
+
+function getMassUsers(days, value) {
     let searchDays = new Date().setDate(new Date().getDate() - days);
     let commit = value.map(({ commit: {author : {email, date, name} } }) => ({
         date,
@@ -24,24 +30,27 @@ function render(days, value) {
             [email]: {  count: oldCount + 1, name, email}
         };
     }, {});
+
     let mass = [];
+
     for (let key in commit) {
         mass.push(commit[key])
     };
+
     mass.sort((a,b) => b.count - a.count);
     let topUser = mass[0].count;
-    console.log(mass)
-    mass.filter(({count}) => topUser === count);
-    console.log(mass)
-    const avatarUrl = value.filter(i => i.commit.author.email === mass[0].email).map(i => i.author.avatar_url)[0]
-    avatar.src = avatarUrl;
-    name.textContent = mass[0].name;
+    render(value,mass)
+    return  mass.filter(({count}) => topUser === count);
 }
 
+
+
 export function getMostActiveDevs(obj) {
-      fetchUser(obj.userId,obj.repoId).then(result => render(obj.days, result));
+      fetchUser(obj.userId,obj.repoId)
+      .then(result => getMassUsers(obj.days, result))
+      .then(result => result);
 }
 
 search.addEventListener('click', () => {
-    getMostActiveDevs({days: number.value, userId: user.value, repoId: repo.value})
+   getMostActiveDevs({days: number.value, userId: user.value, repoId: repo.value})
 })
