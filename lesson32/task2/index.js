@@ -1,5 +1,5 @@
 let avatar = document.querySelector('.user__avatar');
-let name = document.querySelector('.name');
+let name = document.querySelector('.user__name');
 let search = document.querySelector('.search');
 let number = document.querySelector('.number');
 let user = document.querySelector('.userId');
@@ -34,11 +34,9 @@ function render(days, value) {
     name.textContent = mass[0].name;
 }
 
-export function getMostActiveDevs(obj) {
+function getMostActiveDevs(obj) {
       fetchUser(obj.userId,obj.repoId).then(result => render(obj.days, result));
 }
-
-
 
 search.addEventListener('click', () => {
     getMostActiveDevs({days: number.value, userId: user.value, repoId: repo.value})

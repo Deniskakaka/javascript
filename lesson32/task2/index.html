@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Document</title>
-    <style>
-        button{
-            width: 40px;
-            height: 40px;
-            background-color: red;
-        }
-    </style>
 </head>
 <body>
-    <img class="user__avatar" alt="">
-    <span class="name"></span>
-    <div class="main">
-        <input type="text" class="number">
-        <input type="text" class="userId">
-        <input type="text" class="repoId">
-        <button class="search"></button>
+    <div class="page">
+        <div class="user">
+            <img class="user__avatar" alt="User Avatar">
+            <div class="user__info">
+                <span class="user__name"></span>
+                <span class="user__location"></span>
+            </div>
+        </div>
+        <div class="name-form">
+            <input type="text" class="number">
+            <input type="text" class="userId">
+            <input type="text" class="repoId">
+            <button class="search"></button>
+        </div>
     </div>
     <script src="index.js"></script>
 </body>
