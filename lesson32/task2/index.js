@@ -45,10 +45,9 @@ function getMassUsers(days, value) {
 
 
 
-export function getMostActiveDevs(obj) {
+function getMostActiveDevs(obj) {
       fetchUser(obj.userId,obj.repoId)
-      .then(result => getMassUsers(obj.days, result))
-      .then(result => result);
+      .then(result => getMassUsers(obj.days, result));
 }
 
 search.addEventListener('click', () => {
