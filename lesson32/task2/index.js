@@ -27,14 +27,18 @@ function render(days, value) {
     let mass = [];
     for (let key in commit) {
         mass.push(commit[key])
-    }
+    };
     mass.sort((a,b) => b.count - a.count);
+    let topUser = mass[0].count;
+    console.log(mass)
+    mass.filter(({count}) => topUser === count);
+    console.log(mass)
     const avatarUrl = value.filter(i => i.commit.author.email === mass[0].email).map(i => i.author.avatar_url)[0]
     avatar.src = avatarUrl;
     name.textContent = mass[0].name;
 }
 
-export function getMostActiveDevs(obj) {
+function getMostActiveDevs(obj) {
       fetchUser(obj.userId,obj.repoId).then(result => render(obj.days, result));
 }
 
