@@ -36,10 +36,11 @@ function render(value,avatarImg) {
   name.textContent = value[0].name; 
 };
 
-export function getMostActiveDevs(obj) {
+ function getMostActiveDevs(obj) {
    return  fetch(`https://api.github.com/repos/${obj.userId}/${obj.repoId}/commits`)
         .then(response => response.json())
-        .then(result => getMassUsers(obj.days, result));
+        .then(result => getMassUsers(obj.days, result))
+        .then(result => console.log(result))
 };
 
 //search.addEventListener('click', () => {
