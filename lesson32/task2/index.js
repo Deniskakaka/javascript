@@ -29,7 +29,7 @@ function getMassUsers(days, value) {
     avatarUrl = value.filter(i => i.commit.author.email === mass[0].email).map(i => i.author.avatar_url)[0]
     mass.sort((a,b) => b.count - a.count);
     let topUser = mass[0].count;
-    return  mass.filter(({count}) => topUser === count);
+    return  mass;
 }
 
 function render(value,avatarImg) {
