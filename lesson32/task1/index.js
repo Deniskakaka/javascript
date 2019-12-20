@@ -13,7 +13,7 @@ function getUser(str) {
 function render(obj) {
     console.log(obj)
     avatar.src = obj.avatar_url;
-    name.textContent = obj.name;
+    name.textContent = obj.login;
     loc.textContent = obj.location;
 }
 
