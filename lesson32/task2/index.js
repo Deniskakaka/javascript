@@ -40,6 +40,7 @@ export function getMostActiveDevs(obj) {
    return  fetch(`https://api.github.com/repos/${obj.userId}/${obj.repoId}/commits?per_page=100`)
         .then(response => response.json())
         .then(result => getMassUsers(obj.days, result))
+        .then(result => result)
 };
 
 //search.addEventListener('click', () => {
