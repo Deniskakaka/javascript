@@ -5,9 +5,6 @@ let number = document.querySelector('.number');
 let user = document.querySelector('.userId');
 let repo = document.querySelector('.repoId');
 
-let avatarUrl = '';
-let nameUser = '';
-
 function getMassUsers(days, value) {
     let searchDays = new Date().setDate(new Date().getDate() - days);
     let commit = value.map(({ commit: {author : {email, date, name} } }) => ({
@@ -28,16 +25,14 @@ function getMassUsers(days, value) {
     for (let key in commit) {
         mass.push(commit[key])
     };
-    avatarUrl = value.filter(i => i.commit.author.email === mass[0].email).map(i => i.author.avatar_url)[0]
+    let avatarUrl = value.filter(i => i.commit.author.email === mass[0].email).map(i => i.author.avatar_url)[0]
     mass.sort((a,b) => b.count - a.count);
     let topUser = mass[0].count;
-    nameUser = mass[0].name;
     return  mass.filter(({count}) => topUser === count);
 }
 
-function render(value, n) {
-    avatar.src = value;
-    name.textContent = n;
+function render(value) {
+  name.textContent = value[0].name
 };
 
 export function getMostActiveDevs(obj) {
@@ -48,5 +43,5 @@ export function getMostActiveDevs(obj) {
 
 search.addEventListener('click', () => {
    getMostActiveDevs({days: number.value, userId: user.value, repoId: repo.value})
-   render(avatarUrl, nameUser)
+   .then(result => render(result))
 });
