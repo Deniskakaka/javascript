@@ -6,6 +6,7 @@ let user = document.querySelector('.userId');
 let repo = document.querySelector('.repoId');
 
 
+
 function getMassUsers(days, value) {
     let searchDays = new Date().setDate(new Date().getDate() - days);
     let commit = value.map(({ commit: {author : {email, date, name} } }) => ({
@@ -29,21 +30,21 @@ function getMassUsers(days, value) {
     avatarUrl = value.filter(i => i.commit.author.email === mass[0].email).map(i => i.author.avatar_url)[0]
     mass.sort((a,b) => b.count - a.count);
     let topUser = mass[0].count;
-    return  mass;
+    return  mass.filter(({count}) => topUser === count);
 }
 
 function render(value,avatarImg) {
-  name.textContent = value[0].name; 
+  name.textContent = value[0].name
+  avatar.src = value.filter(i => i.commit.author.email === mass[0].email).map(i => i.author.avatar_url)[0]
 };
 
 export function getMostActiveDevs(obj) {
-   return  fetch(`https://api.github.com/repos/${obj.userId}/${obj.repoId}/commits?per_page=100`)
+   return  fetch(`https://api.github.com/repos/${obj.userId}/${obj.repoId}/commits`)
         .then(response => response.json())
-        .then(result => getMassUsers(obj.days, result))
-        .then(result => result)
+        .then(result => getMassUsers(obj.days, result));
 };
 
 //search.addEventListener('click', () => {
   // getMostActiveDevs({days: number.value, userId: user.value, repoId: repo.value})
-  // .then(result => render(result,avatarUrl));
+  // .then(result => render(result,avatarUrl))
 //});
