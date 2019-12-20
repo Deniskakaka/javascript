@@ -13,8 +13,8 @@ function getUser(str) {
 function render(obj) {
     console.log(obj)
     avatar.src = obj.avatar_url;
-    name.textContent = obj.login;
-    loc.textContent = obj.location;
+    name.textContent = obj.name !== null ? obj.name: '';
+    loc.textContent = obj.location !== null ? `from ${obj.location}` : '';
 }
 
 button.addEventListener('click', () =>{
