@@ -31,11 +31,6 @@ function getMassUsers(days, value) {
     mass.sort((a,b) => b.count - a.count);
     let topUser = mass[0].count;
     return  mass.filter(({count}) => topUser === count);
-}
-
-function render(value,avatarImg) {
-  name.textContent = value[0].name
-  avatar.src = value.filter(i => i.commit.author.email === mass[0].email).map(i => i.author.avatar_url)[0]
 };
 
 export function getMostActiveDevs(obj) {
@@ -43,7 +38,6 @@ export function getMostActiveDevs(obj) {
         .then(response => response.json())
         .then(result => getMassUsers(obj.days, result));
 };
-
 //search.addEventListener('click', () => {
   // getMostActiveDevs({days: number.value, userId: user.value, repoId: repo.value})
   // .then(result => render(result,avatarUrl))
