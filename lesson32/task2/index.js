@@ -42,7 +42,7 @@ export function getMostActiveDevs(obj) {
         .then(result => getMassUsers(obj.days, result));
 };
 
-search.addEventListener('click', () => {
-   getMostActiveDevs({days: number.value, userId: user.value, repoId: repo.value})
-   .then(result => render(result,avatarUrl))
-});
+//search.addEventListener('click', () => {
+  // getMostActiveDevs({days: number.value, userId: user.value, repoId: repo.value})
+  // .then(result => render(result,avatarUrl));
+//});
