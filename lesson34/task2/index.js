@@ -12,8 +12,7 @@ successRequest
 const failRequest = Promise.reject(new Error("Something went wrong"));
 
 failRequest
-    .catch(function onError2() {
-        console.error("onError2", error.message);
+    .catch(function onError2(error) {
         throw new Error ('Server error')
     })
     .then(function onSuccess2(data) {
