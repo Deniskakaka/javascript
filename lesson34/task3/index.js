@@ -11,9 +11,11 @@ const defaultUser = {
 }
 
 renderUserData(defaultUser);
+const listElem = document.querySelector('.repo-list');
 
 const onSearchUser = () => {
     showSpinner();
+    listElem.innerHTML = '';
     const userName = document.querySelector('.name-form__input').value;
     fetchUserData(userName)
     .then(userData => {
@@ -26,6 +28,7 @@ const onSearchUser = () => {
         hideSpinner();
     })
     .catch(err => {
+        hideSpinner();
         alert(err.message)
     })
 };

@@ -1,10 +1,14 @@
+const listElem = document.querySelector('.repo-list');
 
 export const renderRepos = reposList => {
-   const repostListElems = reposList
-   reposList.forEach(i => {
-    let li = document.createElement('li');
-    li.textContent = i.name;
-    li.classList.add('repo-list__item');
-    document.querySelector('.repo-list').append(li)
-   });
+   const reposListElems = reposList
+         .map(({name}) => {
+            const listElem = document.createElement('li');
+            listElem.classList.add('repo-list__item');
+            listElem.textContent = name;
+
+            return listElem;
+         });
+         listElem.innerHTML = '';
+         listElem.append(...reposListElems);
 };
