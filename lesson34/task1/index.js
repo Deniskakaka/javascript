@@ -1,7 +1,3 @@
-window.addEventListener("error", function onUnhandledError (err) {
-    console.error("error", err.message);
-});
-
 let userParsingResult;
 
 try {
