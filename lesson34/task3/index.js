@@ -1,34 +1,36 @@
-const button = document.querySelector('.btn');
-const spinner = document.querySelector('.spinner_hidden');
-const img = document.querySelector('.user__avatar');
-const userName = document.querySelector('.user__name');
-const loc = document.querySelector('.user__location')
-const list = document.querySelector('.repo-list');
+import { fetchUserData, fetchRepositories } from './gateWays.js'
+import { renderUserData } from './user.js'
+import {renderRepos} from './repos.js'
 
-function showDateUser(str) {
-    fetch(`https://api.github.com/users/${str}`)
-    .then(response => response.json())
-    .then(result => {
-        img.src = result.avatar_url;
-        userName.textContent = result.name;
-        loc.textContent = result.location;
-        spinner.style.display = 'none';
-
-        fetch(result.repos_url)
-        .then( response => response.json())
-        .then(result => {
-          result.forEach(i => {
-              let li = document.createElement('li');
-              li.textContent = i.name;
-              li.classList.add('repo-list__item');
-              list.append(li)
-          });
-        });
-    })
+const showUserBtnElem = document.querySelector('.name-form__btn');
+const spiner = document.querySelector('.spinner_hidden');
+const defaultUser = {
+    avatar_url :  `https://avatars3.githubusercontent.com/u10001`,
+    name: '',
+    location : '',
 }
 
-button.addEventListener('click', () => {
-    let name = document.querySelector('.name-form__input').value;
-    spinner.style.display = 'block';
-    showDateUser(name);
+renderUserData(defaultUser);
+
+const onSearchUser = () => {
+    const userName = document.querySelector('.name-form__input').value;
+    fetchUserData(userName)
+    .then(userData => {
+        renderUserData(userData);
+        spiner.style.display = 'none'
+        return userData.repos_url
+    })
+    .then(url => fetchRepositories(url))
+    .then(reposList => {
+        return renderRepos(reposList);
+    })
+    .catch(err => {
+        spiner.style.display = 'none'
+        alert(err.message)
+    })
+};
+
+showUserBtnElem.addEventListener('click',() => {
+    onSearchUser()
+    spiner.style.display = 'block'
 });
