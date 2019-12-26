@@ -29,7 +29,7 @@ const onSearchUser = () => {
     })
     .catch(err => {
         hideSpinner();
-        alert(err.message)
+        alert('Failed to load data')
     })
 };
 
