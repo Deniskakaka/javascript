@@ -1,19 +1,18 @@
-export async function getUsersBlogs(urls) {
+ async function getUsersBlogs(urls) {
     let mass  = [];
     for (let i = 0; i < urls.length; i++) {
-        try{
             let response = await fetch(`https://api.github.com/users/${urls[i]}`);
-            if (!response.ok) {
-                return null;
+            if (response.ok) {
+                let result = await response.json()
+                mass.push(result.blog);  
+            } else {
+                throw new Error('Failed to load data');    
             }
-            let result = await response.json()
-            mass.push(result.blog);  
-        } catch(err) {
-            throw new Error ('Failed to fetch user')
-        }
+           
     }
     return mass;
 };
 
-getUsersBlogs(['google', 'facebook', 'gaearon']).then(result => console.log(result))
+getUsersBlogs(['dsfsdffs', 'facebook', 'gaearon','twitter']).then(result => console.log(result))
+    
 
