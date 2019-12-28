@@ -1,11 +1,11 @@
-export async function getUsersBlogs(urls) {
-    let mass = [];
+async function getUserBlogs(urls) {
+    let mass  = [];
     for (let i = 0; i < urls.length; i++) {
-        mass.push(await fetch(`https://api.github.com/users/${urls[i]}`))
+        let response = await fetch(`https://api.github.com/users/${urls[i]}`)
+        if(!response.ok) {
+            return;
+        }
+        mass.push(await response.json())
     }
-    let arr = []
-    for (let i = 0; i < mass.length; i++) {
-        arr.push(await mass[i].json())
-    }
-    return arr.map(i => i.blog)
-};
+   return mass.map(i => i.blog)
+}
