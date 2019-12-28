@@ -25,6 +25,8 @@ const onSearchUser = async () => {
     } catch (err) {
         alert(err.message);
         hideSpinner();
+    } finally {
+        hideSpinner();
     } 
 };
 
