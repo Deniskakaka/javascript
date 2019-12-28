@@ -1,4 +1,4 @@
-export async function getUsersBlogs(urls) {
+async function getUsersBlogs(urls) {
     let mass  = [];
     for (let i = 0; i < urls.length; i++) {
         try{
@@ -15,5 +15,5 @@ export async function getUsersBlogs(urls) {
     return mass;
 };
 
-getUsersBlogs(['', 'facebook', 'gaearon']).then(result => console.log(result))
+getUsersBlogs(['google']).then(result => console.log(result))
 
