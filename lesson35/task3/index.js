@@ -1,4 +1,4 @@
-export async function getUserBlogs(urls) {
+export async function getUsersBlogs(urls) {
     let mass  = [];
     for (let i = 0; i < urls.length; i++) {
        let  response = await fetch(`https://api.github.com/users/${urls[i]}`)
