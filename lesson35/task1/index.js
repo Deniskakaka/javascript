@@ -7,6 +7,6 @@ export async function fetchUser(userId) {
         const userData = await response.json()
         return userData;
     } catch(err) {
-        throw new Error('faild')
+        throw new Error('Failed to fetch user')
     } 
 };
