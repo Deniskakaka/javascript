@@ -11,7 +11,7 @@ export const fetchRepositories = async url => {
     if (response.ok) {
         return await response.json();
     }
-    throw new Error('Failed to load data2');
+    throw new Error('Failed to load data');
 };
 
     
