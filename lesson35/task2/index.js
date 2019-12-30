@@ -1,32 +1,33 @@
-import { fetchUserData, fetchRepositories } from './gateWays.js'
+import { fetchUserData, fetchRepositories } from './gateways.js'
 import { renderUserData } from './user.js'
-import {renderRepos} from './repos.js'
-import {showSpinner, hideSpinner} from './spiner.js'
+import { renderRepos, cleanReposList } from './repos.js'
+import { showSpinner, hideSpinner } from './spinner.js'
 
-const showUserBtnElem = document.querySelector('.name-form__btn');
 const defaultUser = {
-    avatar_url :  `https://avatars3.githubusercontent.com/u10001`,
+    avatar_url: `https://avatars3.githubusercontent.com/u10001`,
     name: '',
-    location : '',
-}
-
-renderUserData(defaultUser);
-const listElem = document.querySelector('.repo-list');
-
-const onSearchUser = async () => {
-    showSpinner();
-    listElem.innerHTML = '';
-    const userName = document.querySelector('.name-form__input').value;
-    try{
-        const userData = await fetchUserData(userName);
-        renderUserData(userData);
-        const repoList = await fetchRepositories(userData.repos_url);
-        renderRepos(repoList);
-    } catch (err) {
-        alert('Faild to load data');
-    } finally {
-        hideSpinner();
-    } 
+    location: '',
 };
 
-showUserBtnElem.addEventListener('click',onSearchUser);
+renderUserData(defaultUser);
+
+const showUserBtnElem = document.querySelector('.name-form__btn');
+const userNameInputElem = document.querySelector('.name-form__input');
+
+async function onSearchUser() {
+    showSpinner();
+    cleanReposList();
+    const userName = userNameInputElem.value;
+    try {
+        const userData = await fetchUserData(userName);
+        renderUserData(userData);
+        const reposList = await fetchRepositories(userData.repos_url);
+        renderRepos(reposList);
+    } catch {
+        alert('Failed to load data');
+    } finally {
+        hideSpinner();
+    }
+};
+
+showUserBtnElem.addEventListener('click', onSearchUser);
