@@ -1,4 +1,4 @@
- async function getUsersBlogs(urls) {
+export async function getUsersBlogs(urls) {
     const requests = urls
     .map(userId => fetch(`https://api.github.com/users/${userId}`)
     .then(response => {
