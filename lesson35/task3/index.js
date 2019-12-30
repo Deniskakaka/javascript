@@ -1,15 +1,8 @@
-export async function getUsersBlogs(urls) {
-    let mass  = [];
-    for (let i = 0; i < urls.length; i++) {
-        try{
-            let response = await fetch(`https://api.github.com/users/${urls[i]}`);
-            let result = await response.json()
-            mass.push(result.blog); 
-        } catch(err) {
-             console.log(err.message)  
-        }
-    }
-    return mass;
+ async function getUsersBlogs(urls) {
+    const requests = urls
+    .map(userId => fetch(`https://api.github.com/users/${userId}`).then(response => response.json()));
+    const usersData = await Promise.all(requests);
+    return usersData.map(user => user.blog)
 };
 
 getUsersBlogs(['', 'facebook', 'gaearon','twitter']).then(result => console.log(result))
